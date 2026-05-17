@@ -3,6 +3,7 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     htop
+    mission-center
     tree
     vim # for fallback if neovim breakes for some reason, we do NOT like nano
     glow
@@ -23,6 +24,10 @@
     blueman
     qt6.qttools
     qt6.qtdeclarative
+    obs-studio
+    wf-recorder
+    texstudio
+    musescore
     # build stuff
     just
     cmake
@@ -33,7 +38,6 @@
     # langs
     gcc
     python3
-#    python3.python3Packages.matplotlib
     pkgs.python3Packages.matplotlib
     # parsers
     jq

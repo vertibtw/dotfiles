@@ -1,0 +1,19 @@
+{
+    imports = [
+        ../../modules/nixos/services/docker.nix
+        ../../modules/nixos/services/ollama.nix
+        ../../modules/nixos/services/open-webui.nix
+        ../../modules/nixos/services/displaymanager.nix
+        ../../modules/nixos/services/openssh.nix
+        ../../modules/nixos/services/pipewire.nix
+        ../../modules/nixos/services/printing.nix
+        ../../modules/nixos/services/x11.nix
+        ../../modules/nixos/services/xkb.nix
+        ../../modules/nixos/programs/zsh.nix
+        ../../modules/nixos/boot/bootloader.nix
+        ../../modules/nixos/boot/kernelpackages.nix
+        ../../modules/nixos/security/rtkit.nix
+        ../../modules/nixos/locale.nix
+        ../../modules/nixos/networking.nix
+    ];
+}

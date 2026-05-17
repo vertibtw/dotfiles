@@ -1,5 +1,6 @@
 {
   description = "<3";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -24,7 +25,7 @@
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./hosts/aria/configuration.nix
+        ./hosts/aria
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
