@@ -6,7 +6,7 @@
             name = "vertibtw";
             email = "btwverti@gmail.com";
         };
-        aliases = {
+        alias = {
             st = "status";
             br = "branch";
             ci = "commit -m";
