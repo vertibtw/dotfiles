@@ -16,7 +16,7 @@
               log --pretty=format:"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)" --graph --date=relative --decorate --all
           '';
             #stolen from someone idk
-            yolo = "!git commit -am '$(curl -s https://whatthecommit.com/index.txt)'";
+            yolo = ''!git commit -am "$(curl -s https://whatthecommit.com/index.txt)"'';
         };
     };
   };
