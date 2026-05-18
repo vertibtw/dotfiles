@@ -9,7 +9,7 @@
         aliases = {
             st = "status";
             br = "branch";
-            c = "commit -m";
+            ci = "commit -m";
             ca = "commit -am";
             co = "checkout";
             hs = ''
