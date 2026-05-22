@@ -1,6 +1,6 @@
-local mons = {}
+local M = {}
 
-function mons.init()
+function M.init()
   hl.monitor({
       output   = "eDP-1",
       mode     = "preferred",
@@ -16,4 +16,4 @@ function mons.init()
   })
 end
 
-return mons
+return M

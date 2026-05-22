@@ -5,5 +5,6 @@
         ./awww.nix
         ./quickshell.nix
         ./vscode.nix
+        ./emacs.nix
     ];
 }

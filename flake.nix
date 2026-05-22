@@ -26,13 +26,14 @@
 
       modules = [
         ./hosts/aria
+        ./modules
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs; }; # very special, just like me
 
-          home-manager.users.verti = import ./home;
+          home-manager.users.verti = import ./home/verti;
         }
       ];
     };

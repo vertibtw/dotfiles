@@ -1,6 +1,6 @@
-local binds = {}
+local M = {}
 
-function binds.init(terminal, filemgr, menu, scr)
+function M.init(terminal, filemgr, menu, scr)
   local mainMod = "SUPER"
 
   hl.bind(mainMod .. "+ SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
@@ -40,11 +40,6 @@ function binds.init(terminal, filemgr, menu, scr)
   hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
   hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+end -- M.init()
 
-  -- qs
---  hl.bind(mainMod, hl.dsp.exec_cmd("quickshell ipc call wsid show")) -- press
---  hl.bind(mainMod, hl.dsp.exec_cmd("quickshell ipc call wsid hide"), { release = true }) -- release
-  hl.bind(mainMod, hl.dsp.global("quickshell:ws"))
-end -- binds.init()
-
-return binds
+return M

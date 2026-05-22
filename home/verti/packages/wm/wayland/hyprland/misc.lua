@@ -1,6 +1,6 @@
-local misc = {}
+local M = {}
 
-function misc.init()
+function M.init()
   hl.config({
       misc = {
           force_default_wallpaper = 1,
@@ -9,4 +9,4 @@ function misc.init()
   })
 end
 
-return misc
+return M

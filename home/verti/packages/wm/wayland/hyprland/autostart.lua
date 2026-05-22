@@ -1,6 +1,6 @@
-local init = {}
+local M = {}
 
-function init.init()
+function M.init()
   hl.exec_cmd("kitty -e fastfetch")
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("blueman-applet")
@@ -39,4 +39,4 @@ function init.init()
   hl.exec_cmd("hyprctl notify 1 2000 0 hello")
 end
 
-return init
+return M

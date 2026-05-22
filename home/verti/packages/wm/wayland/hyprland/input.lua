@@ -1,10 +1,10 @@
 -- there's really no need for this, but it's cool so
-local input = {
+local M = {
   devices = {},
   input = {},
 }
 
-function input.devices.init()
+function M.devices.init()
   -- thinkpad nipple heh
   hl.device({
       name        = "tpps/2-elan-trackpoint",
@@ -17,7 +17,7 @@ function input.devices.init()
   })
 end
 
-function input.input.init()
+function M.input.init()
   hl.config({
       input = {
           kb_layout  = "pl",
@@ -30,9 +30,9 @@ function input.input.init()
   })
 end
 
-function input.init()
+function M.init()
   input.devices.init()
   input.input.init()
 end
 
-return input
+return M

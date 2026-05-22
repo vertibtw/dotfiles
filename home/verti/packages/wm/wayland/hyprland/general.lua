@@ -1,4 +1,4 @@
-local general = {}
+local M = {}
 
 function general.init(colorscheme)
   hl.config({
@@ -18,4 +18,4 @@ function general.init(colorscheme)
  })
 end
 
-return general
+return M

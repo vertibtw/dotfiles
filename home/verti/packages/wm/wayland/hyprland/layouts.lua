@@ -1,10 +1,10 @@
-local layouts = {}
+local M = {}
 
-function layouts.init()
+function M.init()
   hl.config({
     general.layout = "master",
     master.new_status = "master",
   })
 end
 
-return layouts
+return M
