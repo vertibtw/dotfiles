@@ -49,5 +49,9 @@
     # for spotify_player
     openssl
     alsa-lib
+    audacity
+    pkgs.pyright          
+    pkgs.clang-tools     
+    pkgs.nil
   ];
 }

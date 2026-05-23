@@ -1,3 +1,3 @@
 {
-    imports = [ ./nixos ];
+    imports = [ ./nixos ./themes ];
 }

@@ -5,12 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     hyprland-git = {
-        url = "github:hyprwm/Hyprland"; # "latest and not the greatest" - yev
+        url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
     };
 
     qs-git = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell"; # I kinda like latest git stuff :p
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -26,12 +26,15 @@
 
       modules = [
         ./hosts/aria
-        ./modules
+        ./modules/nixos
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; }; # very special, just like me
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+            theme = import ./modules/themes;
+          };
 
           home-manager.users.verti = import ./home/verti;
         }
