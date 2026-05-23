@@ -31,8 +31,8 @@ function M.input.init()
 end
 
 function M.init()
-  input.devices.init()
-  input.input.init()
+  M.devices.init()
+  M.input.init()
 end
 
 return M

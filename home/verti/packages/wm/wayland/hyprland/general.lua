@@ -1,6 +1,6 @@
 local M = {}
 
-function general.init(colorscheme)
+function M.init(colorscheme)
   hl.config({
       general = {
           gaps_in  = 5,

@@ -2,6 +2,7 @@
 {
     programs.emacs = {
         enable = true;
+        package = pkgs.emacs30-pgtk;
 
         # this is really cool, basically nix manages my packages instead of (m)elpa
         extraPackages = epkgs: [
