@@ -50,8 +50,7 @@
     openssl
     alsa-lib
     audacity
-    pkgs.pyright          
-    pkgs.clang-tools     
-    pkgs.nil
+    pyright          
+    nil
   ];
 }

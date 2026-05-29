@@ -21,6 +21,8 @@
             epkgs.consult
             epkgs.orderless
             epkgs.neotree
+            epkgs.ultra-scroll
+            epkgs.dashboard
         ];
 
         extraConfig = ''
@@ -44,6 +46,19 @@
             (electric-pair-mode 1)
       	    (electric-indent-mode 1)
 
+            ;; for smooth scrolling
+            (setq scroll-step 1)
+            (setq scroll-conservatively 10000)
+            (setq auto-window-vscroll nil)
+            (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+            (setq mouse-wheel-progressive-speed nil)
+            (setq mouse-wheel-follow-mouse t)
+            (setq scroll-preserve-screen-position t)
+
+            (use-package ultra-scroll ; for touchpad scroll
+             :ensure t
+             :init
+             (ultra-scroll-mode 1))
 
             (use-package evil
               :init
@@ -109,6 +124,21 @@
                   (kbd "<leader>ws") 'split-window-below
                   (kbd "<leader>wk") 'delete-window
                   (kbd "<leader>qq") 'save-buffers-kill-emacs))
+            (use-package dashboard
+              :config
+              (dashboard-setup-startup-hook)
+              (setq dashboard-center-content t)
+              (setq dashboard-startup-banner 'none)
+              (setq dashboard-show-shortcuts nil)
+              (setq dashboard-items '((recents . 5))))
+
+              (setq dashboard-startupify-list '(dashboard-insert-newline
+                                  dashboard-insert-banner-title
+                                  dashboard-insert-items
+                                  dashboard-insert-newline
+                                  dashboard-insert-footer))
+
+              (setq dashboard-banner-logo-title "${theme.editor-ascii}")
             '';
     };
 }
