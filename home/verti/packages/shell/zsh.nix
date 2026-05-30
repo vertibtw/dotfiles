@@ -11,5 +11,5 @@
             ];
         };
     };
-    home.sessionVariables.SHELL = "${pkgs.zsh}/bin/zsh";
+#    home.sessionVariables.SHELL = "${pkgs.zsh}/bin/zsh";
 }

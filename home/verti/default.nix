@@ -8,5 +8,6 @@
 
   imports = [
     ./packages
+    ./sessionVariables.nix
   ];
 }

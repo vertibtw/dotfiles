@@ -50,7 +50,8 @@
     openssl
     alsa-lib
     audacity
-    pyright          
+    pyright
     nil
   ];
+
 }
