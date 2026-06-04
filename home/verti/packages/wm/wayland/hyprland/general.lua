@@ -1,6 +1,7 @@
+local colorscheme = require("misc.colors")
 local M = {}
 
-function M.init(colorscheme)
+function M.init()
   hl.config({
       general = {
           gaps_in  = 5,
@@ -14,6 +15,10 @@ function M.init(colorscheme)
           },
 
           resize_on_border = false, -- windows ahh behavior, we do NOT want this
+      },
+      misc = {
+          force_default_wallpaper = 1,
+          disable_hyprland_logo   = true,
       },
  })
 end

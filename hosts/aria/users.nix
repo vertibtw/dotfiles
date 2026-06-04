@@ -5,6 +5,6 @@
     description = "verti";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
 
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 }

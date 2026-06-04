@@ -1,15 +1,16 @@
+local apps = require("apps")
 local M = {}
 
-function M.init(terminal, filemgr, menu, scr)
+function M.init()
   local mainMod = "SUPER"
 
-  hl.bind(mainMod .. "+ SHIFT + RETURN", hl.dsp.exec_cmd(terminal))
+  hl.bind(mainMod .. "+ SHIFT + RETURN", hl.dsp.exec_cmd(apps.terminal))
   hl.bind(mainMod .. "+ SHIFT + C", hl.dsp.window.close())
 
   hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-  hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(filemgr))
-  hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(scr))
-  hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
+  hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(apps.filemgr))
+  hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(apps.screenshot))
+  hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(apps.menu))
 
   hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
   hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))

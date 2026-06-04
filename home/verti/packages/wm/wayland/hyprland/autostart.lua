@@ -9,34 +9,9 @@ function M.init()
   hl.exec_cmd("spotify_player --daemon")
   hl.exec_cmd("qs")
 
-
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
-  hl.exec_cmd("hyprctl notify 1 2000 0 hello")
+  for i = 0, 20 do
+    hl.exec_cmd("hyprctl notify 1 2000 0 hello")
+  end
 end
 
 return M

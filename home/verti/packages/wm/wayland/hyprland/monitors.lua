@@ -5,7 +5,7 @@ function M.init()
       output   = "eDP-1",
       mode     = "preferred",
       position = "0x0",
-      scale    = "auto",
+      scale    = "1",
   })
 
   hl.monitor({
