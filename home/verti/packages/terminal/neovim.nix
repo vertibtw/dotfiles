@@ -1,5 +1,5 @@
 # emacs fucked up the indentation in this file, idk don't wanna fix it
-{ pkgs, ... } :
+{ pkgs, theme, ... } :
 {
   programs.neovim = {
     enable = true;
@@ -24,6 +24,8 @@
                 telescope-nvim
 				telescope-fzf-native-nvim
 
+                which-key-nvim
+
                 {
                   plugin = gitsigns-nvim;
                   type = "lua";
@@ -44,7 +46,7 @@
                 {
                   plugin = lualine-nvim;
                   type = "lua";
-                  config = ''require("lualine").setup({ options = { theme = "catppuccin" } })'';
+                  config = ''require("lualine").setup({ options = { theme = "catppuccin-nvim" } })'';
                 }
 
                 {
@@ -63,6 +65,27 @@
 				nvim-surround
 				comment-nvim
 				vim-illuminate
+
+                {
+                  plugin = alpha-nvim;
+                  type = "lua";
+                  config = ''
+                    local alpha = require("alpha")
+                    local dash = require("alpha.themes.dashboard")
+
+                    dash.section.header.val = vim.split([[${theme.editor-ascii}]], "\n", { trimempty = true }) -- this is the best way to split the string at newlines (shitty plugin cannot just put the whole text in, smh)
+
+                    dash.section.buttons.val = {
+                      dash.button("n", "  new file",      ":ene <BAR> startinsert<CR>"),
+                      dash.button("f", "  find file",     ":Telescope find_files<CR>"),
+                      dash.button("r", "  recent",        ":Telescope oldfiles<CR>"),
+                      dash.button("q", "  quit",          ":qa<CR>"),
+                    }
+
+                    dash.section.footer.val = ""
+                    alpha.setup(dash.config)
+                  '';
+                }
     ];
 
     initLua = ''
@@ -74,6 +97,15 @@
 	  vim.opt.cursorline = true
 
       vim.cmd.colorscheme("catppuccin")
+
+      vim.g.mapleader = " "
+
+      vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files)
+      vim.keymap.set('n', '<F4>', require('telescope.builtin').colorscheme)
+
+      vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status)
+      vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches)
+      vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files)
     '';
 
     extraPackages = with pkgs; [
