@@ -82,7 +82,7 @@
                       dash.button("q", "  quit",          ":qa<CR>"),
                     }
 
-                    dash.section.footer.val = ""
+                    dash.section.footer.val = "I use nvim btw"
                     alpha.setup(dash.config)
                   '';
                 }

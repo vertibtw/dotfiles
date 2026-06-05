@@ -45,6 +45,7 @@ Variants {
                 // components
                 RandomWallpaper {}
                 Screenshot {}
+                Media {}
             }
         }
 
