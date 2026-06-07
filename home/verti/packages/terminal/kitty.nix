@@ -7,6 +7,8 @@
             scrollback_lines = 100000;
             enable_audio_bell = false;
 
+            window_padding_width = 0; # neovim fix sort of
+
 
             # colors (sort of amoled catppuccin)
 
