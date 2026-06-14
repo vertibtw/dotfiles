@@ -36,7 +36,7 @@
             theme = import ./modules/themes;
           };
 
-          home-manager.users.verti = import ./home/verti;
+          home-manager.users.verti = import ./modules/nixos/profiles/desktop.nix;
         }
       ];
     };

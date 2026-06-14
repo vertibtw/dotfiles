@@ -6,5 +6,6 @@
     ./ssh.nix
     ./kitty.nix
     ./spotify-player.nix
+    ./zellij.nix
   ];
 }

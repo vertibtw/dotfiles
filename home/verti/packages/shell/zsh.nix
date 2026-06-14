@@ -10,6 +10,10 @@
                 "sudo"
             ];
         };
+        initContent = 
+             ''
+             if [[ -z "$ZELLIJ" ]] && [[ "$TERM_PROGRAM" != "vscode" ]]; then exec zellij fi
+             '';
     };
 #    home.sessionVariables.SHELL = "${pkgs.zsh}/bin/zsh";
 }
