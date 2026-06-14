@@ -34,6 +34,8 @@
         obs-studio
         wf-recorder
         texstudio
+        xev
+        wev
         musescore
         # build stuff
         just
