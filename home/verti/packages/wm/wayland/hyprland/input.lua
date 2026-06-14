@@ -1,4 +1,5 @@
 -- there's really no need for this, but it's cool so
+-- also the keybindinds are not here simly because there's too many of them
 local M = {
   devices = {},
   input = {},

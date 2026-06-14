@@ -13,9 +13,14 @@ function M.init()
   hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(apps.menu))
 
   hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
-  hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-  hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
+  hl.bind(mainMod .. " + L",  hl.dsp.focus({ direction = "right" }))
+  hl.bind(mainMod .. " + K",  hl.dsp.focus({ direction = "up" }))
   hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
+  hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+  hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+  hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+  hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+
   hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
   hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({action = "toggle"}))
 
@@ -27,6 +32,7 @@ function M.init()
 
   hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
   hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+
   hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
   hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
@@ -36,6 +42,7 @@ function M.init()
   hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
   hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
   hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+
   hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
   hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
   hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
