@@ -1,4 +1,4 @@
 {
-  networking.hostName = "aria";
+#  networking.hostName = "aria";
   networking.networkmanager.enable = true;
 }
