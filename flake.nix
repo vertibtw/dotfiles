@@ -18,14 +18,19 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSl";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.reimu = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
 
       modules = [
-        ./hosts/aria
+        ./hosts/reimu
         ./modules/nixos
 
         home-manager.nixosModules.home-manager {
@@ -40,5 +45,26 @@
         }
       ];
     };
+
+   nixosConfigurations.marisa = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+
+      modules = [
+        ./hosts/marisa
+        ./modules/nixos
+
+	home-manager.nixosModules.home-manager {
+	  home-manager.useGlobalPkgs = true;
+ 	  home-manager.useUserPackages = true;
+	  home-manager.extraSpecialArgs = {
+            inherit inputs;
+	    theme = import ./modules/themes;
+          };
+	  home-manager.users.verti = import ./modules/nixos/profiles/wsl.nix;
+
+        }
+      ];
+   };
   };
 }
