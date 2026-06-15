@@ -1,2 +1,2 @@
 # dotfiles
-very messy nix dotfiles, working on hopes and dreams
+warcrimes against the nix community

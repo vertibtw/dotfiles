@@ -6,5 +6,6 @@
         ./quickshell.nix
         ./vscode.nix
         ./emacs.nix
+        ./tofi.nix
     ];
 }

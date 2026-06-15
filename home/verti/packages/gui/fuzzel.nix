@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
     programs.fuzzel = {
-        enable = true;
+        enable = false;
         settings = {
             main = {
                 terminal = "kitty";

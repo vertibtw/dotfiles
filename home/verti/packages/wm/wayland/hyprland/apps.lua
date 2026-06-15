@@ -2,7 +2,9 @@ local M = {}
 
 M.terminal    = "kitty"
 M.filemgr     = "dolphin"
-M.menu        = "fuzzel"
+--M.menu        = "fuzzel"
+M.menu        = "tofi-drun"
+M.menu_args   = "--fuzzy-match true | bash"
 M.screenshot  = 'grim -g "$(slurp)" - | wl-copy'
 
 function M.init ()
