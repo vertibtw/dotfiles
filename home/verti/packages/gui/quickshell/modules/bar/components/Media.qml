@@ -26,7 +26,7 @@ Item {
 
         Rectangle {
             id: titleclip
-            width: Math.min(200, titletext.implicitWidth)
+            width: Math.min(150, titletext.implicitWidth)
             height: titletext.implicitHeight
             color: "transparent"
             clip: true

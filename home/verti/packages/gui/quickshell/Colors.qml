@@ -14,4 +14,8 @@ Singleton {
     property string light_blue: "#99d1db" 
     property string yellow: "#f9e2af" 
     property string green: "#a6e3a1" 
+    property string mauve: "#cba6f7"
+    property string teal: "#94e2d5"
+    property string mantle: "#181825"
+    property string crust: "#11111b"
 }

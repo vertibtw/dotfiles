@@ -5,6 +5,8 @@ import QtQuick.Layouts
 
 import qs
 import qs.modules.bar.components
+import qs.modules.dashboard
+import qs.modules.dashboard.components
 
 Variants {
     model: Quickshell.screens
@@ -25,6 +27,11 @@ Variants {
         implicitHeight: screen.height * 0.02
         color: Colors.background
 
+        Dashboard {
+            parentWindow: bar
+            visible: dashBtn.popupActive
+        }
+
         Rectangle {
             implicitHeight: rl.implicitHeight 
             implicitWidth: rl.implicitWidth + 20 // +20 for padding
@@ -43,6 +50,7 @@ Variants {
                 anchors.centerIn: parent
 
                 // components
+                DashboardButton { id: dashBtn }
                 RandomWallpaper {}
                 Screenshot {}
                 Media {}
