@@ -39,13 +39,14 @@ Variants {
             Row {
                 id: rl
                 anchors.left: parent.left
-                spacing: 4
+                spacing: 6
                 anchors.centerIn: parent
 
                 // components
                 RandomWallpaper {}
                 Screenshot {}
                 Media {}
+                Workspaces {}
             }
         }
 
@@ -54,7 +55,7 @@ Variants {
             anchors.centerIn: parent
 
             // components
-            Workspaces {}
+            // Workspaces {}
         }
 
         Rectangle {

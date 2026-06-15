@@ -19,7 +19,7 @@ Item {
             id: icon
             color: Colors.foreground
             font.pixelSize: 15
-            text: ""
+            text: "󰩭"
             MouseArea {
                 anchors.fill: parent
                 onClicked: {

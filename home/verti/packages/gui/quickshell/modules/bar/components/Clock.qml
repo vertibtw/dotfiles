@@ -16,11 +16,11 @@ Item {
     Row {
         id: r
         spacing: 8
-        Text {
-            id: icon
-            color: Colors.yellow
-            text: "󱑆"
-        }
+        // Text {
+        //     id: icon
+        //     color: Colors.yellow
+        //     text: "󱑆"
+        // }
 
         Text {
             id: clock

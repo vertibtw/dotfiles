@@ -10,6 +10,7 @@ Item {
     id: root
     implicitWidth: bg.childrenRect.width + 20 // +20 is for 10px margins on each side of the thing
     implicitHeight: bg.childrenRect.height
+    anchors.verticalCenter: parent.verticalCenter
 
     Rectangle {
         id: bg

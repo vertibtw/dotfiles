@@ -15,14 +15,28 @@ Item {
         id: row
         spacing: 6
 
-        Text {
-            text: root.battery.isCharging ? "󰂄" : "󰁹" 
-            color: Colors.green 
+        Rectangle {
+            radius: 5
+            color: Colors.grey 
+            width: percentage.width * 2
+            height: percentage.height
+
+            Rectangle {
+                id: percentage_visual
+                radius: parent.radius
+                color: (root.battery.state == UPowerDeviceState.Charging) ? Colors.green : Colors.foreground
+                anchors.left: parent.left
+                height: parent.height
+                width: parent.width * root.battery.percentage;
+            }
+
+            Text {
+                id: percentage
+                text: (root.battery.state == UPowerDeviceState.Charging? "󱐋" : "") + Math.round(root.battery.percentage * 100)
+                anchors.centerIn: parent
+                color: (Math.round(root.battery.percentage * 100) >= 50) ? Colors.background : Colors.foreground
+            }
         }
 
-        Text {
-            text: Math.round(root.battery.percentage * 100) + "%"
-            color: Colors.foreground
-        }
     }
 }
