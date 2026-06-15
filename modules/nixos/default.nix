@@ -1,3 +1,3 @@
 {
-    imports = [ ./services ./security ./programs ./locale.nix ./networking.nix ./settings.nix ]; #./boot removed temp
+    imports = [ ./services ./security ./programs ./locale.nix ./boot ./networking.nix ./settings.nix ];
 }

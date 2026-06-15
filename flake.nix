@@ -25,49 +25,22 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.reimu = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-
-      modules = [
-        ./hosts/reimu
-        ./modules/nixos
-        ./modules/home
-
-        home-manager.nixosModules.home-manager {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-            theme = import ./modules/themes;
-          };
-
-          home-manager.users.verti = import ./modules/nixos/profiles/desktop.nix;
-        }
-      ];
-    };
-
-   nixosConfigurations.marisa = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-
-      modules = [
-        ./hosts/marisa
-        ./modules/nixos
-        ./modules/home
-
-	    home-manager.nixosModules.home-manager {
-	      home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-	        home-manager.extraSpecialArgs = {
-            inherit inputs;
-    	    theme = import ./modules/themes;
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  let
+    mkHost = import ./lib/mkHost.nix { inherit inputs home-manager nixpkgs; };
+  in
+  {
+    nixosConfigurations = {
+        reimu = mkHost {
+            hostname = "reimu";
+            hmProfile = import ./modules/nixos/profiles/desktop.nix;
+            extraArgs = { isWsl = false; };
         };
-  	    home-manager.users.verti = import ./modules/nixos/profiles/wsl.nix;
-
-        }
-      ];
-   };
+        marisa = mkHost {
+            hostname = "marisa";
+            hmProfile = import ./modules/nixos/profiles/wsl.nix;
+            extraArgs = { isWsl = true; };
+        };
+    };
   };
 }

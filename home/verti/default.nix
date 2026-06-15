@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, isWsl, config, pkgs, ... }:
 
 {
   home.username = "verti";
@@ -7,7 +7,6 @@
   home.stateVersion = "25.11";
 
   imports = [
-#    ./packages
     ./sessionVariables.nix
-  ];
+  ] ++  lib.optionals (!isWsl) [./packages];
 }
