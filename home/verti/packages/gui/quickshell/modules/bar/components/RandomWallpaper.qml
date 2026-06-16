@@ -1,15 +1,28 @@
 import qs
+import qs.util
 
 import Quickshell
+import Quickshell.Hyprland
 import QtQuick
 
 Item {
     id: root
-
-    property string cmd: "awww img --transition-type=center $(find $HOME/Pictures/Wallpapers/ -type f | shuf -n 1)"
+    required property var wal
 
     implicitHeight: btn.height
     implicitWidth: btn.width
+
+
+    RandomFile {
+        id: randomwal
+        dir: "/home/verti/Pictures/Wallpapers/"
+    }
+
+    Binding {
+        target: wal
+        property: "src"
+        value: randomwal.path
+    }
 
     Rectangle {
         id: btn
@@ -26,11 +39,7 @@ Item {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    Quickshell.execDetached([
-                        "sh",
-                        "-c",
-                        root.cmd
-                    ])
+                    randomwal.reroll()
                 }
             }
         }    

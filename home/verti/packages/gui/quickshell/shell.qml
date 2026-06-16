@@ -2,7 +2,9 @@ import Quickshell
 import QtQuick
 
 import qs.modules.bar
+import qs.modules.wallpaper
 
 ShellRoot {
-    Bar{}
+    Wallpaper {id: wall}
+    Bar {wallpapermod: wall}
 }
