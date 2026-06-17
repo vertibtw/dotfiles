@@ -79,8 +79,9 @@ Item {
                     id: rr
                     spacing: 6
                     anchors.centerIn: parent
-                    Battery {}
                     Clock {}
+                    Tray {parentwindow: bar}
+                    Battery {}
                 }
             }
         }
