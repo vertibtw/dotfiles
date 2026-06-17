@@ -38,8 +38,11 @@ Item {
             text: ""
             MouseArea {
                 anchors.fill: parent
-                onClicked: {
-                    randomwal.reroll()
+                onClicked: (mouse) => {
+                    if (mouse.button === Qt.RightButton)
+                        randomwal.reroll() // temp 
+                    else
+                        randomwal.reroll()
                 }
             }
         }    

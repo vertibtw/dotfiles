@@ -17,14 +17,20 @@ Item {
 
         Rectangle {
             radius: 5
-            color: Colors.grey 
+            color: Colors.light_grey 
             width: percentage.width * 2
             height: percentage.height
 
             Rectangle {
                 id: percentage_visual
                 radius: parent.radius
-                color: (root.battery.state == UPowerDeviceState.Charging) ? Colors.green : Colors.foreground
+                color: { 
+                    if (Math.round(root.battery.percentage * 100) < 20) {
+                        return Colors.red
+                    } else {
+                        return (root.battery.state == UPowerDeviceState.Charging) ? Colors.green : Colors.foreground
+                    }
+                }
                 anchors.left: parent.left
                 height: parent.height
                 width: parent.width * root.battery.percentage;
@@ -34,7 +40,7 @@ Item {
                 id: percentage
                 text: (root.battery.state == UPowerDeviceState.Charging? "󱐋" : "") + Math.round(root.battery.percentage * 100)
                 anchors.centerIn: parent
-                color: (Math.round(root.battery.percentage * 100) >= 50) ? Colors.background : Colors.foreground
+                color: Colors.background
             }
         }
 

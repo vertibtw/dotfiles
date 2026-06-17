@@ -5,9 +5,6 @@ import QtQuick.Layouts
 
 import qs
 import qs.modules.bar.components
-import qs.modules.dashboard
-import qs.modules.dashboard.components
-
 Item {
     id: root
     width: childrenRect.width
@@ -33,11 +30,6 @@ Item {
             implicitHeight: screen.height * 0.02
             color: Colors.background
 
-            Dashboard {
-                parentWindow: bar
-                visible: dashBtn.popupActive
-            }
-
             Rectangle {
                 implicitHeight: rl.implicitHeight 
                 implicitWidth: rl.implicitWidth + 20 // +20 for padding
@@ -56,7 +48,6 @@ Item {
                     anchors.centerIn: parent
 
                     // components
-                    DashboardButton { id: dashBtn }
                     RandomWallpaper { wal: root.wallpapermod }
                     Screenshot {}
                     Media {}
@@ -86,7 +77,7 @@ Item {
 
                 Row {
                     id: rr
-                    spacing: 4
+                    spacing: 6
                     anchors.centerIn: parent
                     Battery {}
                     Clock {}
