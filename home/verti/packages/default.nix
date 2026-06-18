@@ -8,8 +8,11 @@
     ];
     fonts.fontconfig.enable = true;
     home.packages = with pkgs; [
+        # TODO: figure out how to keep this sorted
         htop
         mission-center
+        # nm-applet
+        networkmanagerapplet
         tree
         vim # for fallback if neovim breakes for some reason, we do NOT like nano
         glow
