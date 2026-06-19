@@ -8,61 +8,55 @@
     ];
     fonts.fontconfig.enable = true;
     home.packages = with pkgs; [
-        # TODO: figure out how to keep this sorted
-        htop
-        mission-center
-        # nm-applet
-        networkmanagerapplet
-        tree
-        vim # for fallback if neovim breakes for some reason, we do NOT like nano
-        glow
-        curl
-        curl.dev
-        playerctl
-        wl-clipboard
-        wl-gammactl
-        nwg-look
-        grim
-        slurp
-        unzip
-        ripgrep
-        brightnessctl
-        fd
-        fzf
-        tty-clock
-        spotify
-        blueman
-        qt6.qttools
-        qt6.qtdeclarative
-        obs-studio
-        wf-recorder
-        texstudio
-        xev
-        wev
-        musescore
-        # build stuff
-        just
-        cmake
-        gnumake
-        pkg-config
-        bear
-        clang-tools
-        # langs
-        gcc
-        python3
-        pkgs.python3Packages.matplotlib
-        # parsers
-        jq
-        yq
-        # font
-        pkgs.nerd-fonts.ubuntu
-        # the browser
-        brave
-        # for spotify_player
-        openssl
+        # keep-sorted start
         alsa-lib
         audacity
-        pyright
+        bear
+        blueman
+        brave
+        brightnessctl
+        clang-tools
+        cmake
+        curl
+        curl.dev
+        fd
+        fzf
+        gcc
+        glow
+        gnumake
+        grim
+        htop
+        jq
+        just
+        keep-sorted
+        mission-center
+        networkmanagerapplet
         nil
+        nwg-look
+        obs-studio
+        openssl
+        pkg-config
+        pkgs.nerd-fonts.ubuntu
+        pkgs.python3Packages.matplotlib
+        playerctl
+        pyright
+        python3
+        qt6.qtdeclarative
+        qt6.qttools
+        ripgrep
+        slurp
+        spotify
+        texstudio
+        tree
+        tty-clock
+        unzip
+        vim
+        wev
+        wf-recorder
+        wl-clipboard
+        wl-gammactl
+        xev
+        yq
+        # keep-sorted end
     ];
 }
