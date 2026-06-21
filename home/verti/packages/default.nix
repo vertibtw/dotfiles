@@ -29,12 +29,14 @@
         jq
         just
         keep-sorted
+        libnotify
         mission-center
         networkmanagerapplet
         nil
         nwg-look
         obs-studio
         openssl
+        osu-lazer-bin
         pkg-config
         pkgs.nerd-fonts.ubuntu
         pkgs.python3Packages.matplotlib
