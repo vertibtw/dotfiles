@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/determinate-nix-action@v3
-      - run: nix develop --command bash -c "find . -name '*.nix' | xargs keep-sorted"
+      - run: nix shell nixpkgs#keep-sorted --command bash -c "find . -name '*.nix' | xargs keep-sorted"
       - run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
