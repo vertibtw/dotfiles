@@ -26,7 +26,7 @@ Item {
                     Quickshell.execDetached([
                         "sh",
                         "-c",
-                        'grim -g "$(slurp)" - | wl-copy'
+                        'grim -g "$(slurp)" - | convert - -resize 200% png:- | wl-copy'
                     ])
                 }
             }
