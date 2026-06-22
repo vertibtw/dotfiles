@@ -9,13 +9,11 @@
     fonts.fontconfig.enable = true;
     home.packages = with pkgs; [
         # keep-sorted start
-        imagemagick
         alsa-lib
         audacity
         bear
         blueman
         brave
-        ripgrep
         brightnessctl
         clang-tools
         cmake
@@ -28,6 +26,7 @@
         gnumake
         grim
         htop
+        imagemagick
         jq
         just
         keep-sorted
