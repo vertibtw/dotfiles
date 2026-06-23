@@ -18,6 +18,7 @@
                 "title"
                 "separator"
                 "os"
+                "uptime"
                 "kernel"
                 "shell"
                 "wm"
