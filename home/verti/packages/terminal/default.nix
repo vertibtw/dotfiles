@@ -1,11 +1,11 @@
 {
   imports = [
     #keep-sorted start
-    ./git.nix
-    ./neovim.nix
     ./fastfetch.nix
-    ./ssh.nix
+    ./git.nix
     ./kitty.nix
+    ./neovim.nix
+    ./ssh.nix
     ./zellij.nix
     #keep-sorted end
   ];
