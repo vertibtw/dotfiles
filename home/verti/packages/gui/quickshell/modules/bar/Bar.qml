@@ -5,6 +5,7 @@ import QtQuick.Layouts
 
 import qs
 import qs.modules.bar.components
+import qs.modules.bar.components.brightness
 Item {
     id: root
     width: childrenRect.width
@@ -29,6 +30,11 @@ Item {
 
             implicitHeight: screen.height * 0.02
             color: Colors.background
+
+            Brightness {
+                id: brightness_popup
+                parentWindow: bar
+            }
 
             Rectangle {
                 implicitHeight: rl.implicitHeight 
@@ -81,6 +87,7 @@ Item {
                     anchors.centerIn: parent
                     Clock {}
                     Tray {parentwindow: bar}
+                    BrightnessButton{brightness_popup: brightness_popup}
                     Battery {}
                 }
             }

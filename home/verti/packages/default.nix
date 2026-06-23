@@ -44,6 +44,7 @@
         playerctl
         psmisc
         pyright
+        hyprshade
         python3
         qt6.qtdeclarative
         qt6.qttools
