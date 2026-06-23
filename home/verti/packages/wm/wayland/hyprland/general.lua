@@ -14,7 +14,7 @@ function M.init()
             inactive_border = colorscheme.inactive,
           },
 
-          resize_on_border = false, -- windows ahh behavior, we do NOT want this
+          resize_on_border = false,
       },
       misc = {
           force_default_wallpaper = 1,

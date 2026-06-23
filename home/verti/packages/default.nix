@@ -33,6 +33,7 @@
         libnotify
         mission-center
         networkmanagerapplet
+        psmisc
         nil
         nwg-look
         obs-studio
