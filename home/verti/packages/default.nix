@@ -26,6 +26,7 @@
         gnumake
         grim
         htop
+        hyprshade
         imagemagick
         jq
         just
@@ -44,7 +45,6 @@
         playerctl
         psmisc
         pyright
-        hyprshade
         python3
         qt6.qtdeclarative
         qt6.qttools
