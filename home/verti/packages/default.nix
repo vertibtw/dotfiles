@@ -33,7 +33,6 @@
         libnotify
         mission-center
         networkmanagerapplet
-        psmisc
         nil
         nwg-look
         obs-studio
@@ -43,6 +42,7 @@
         pkgs.nerd-fonts.ubuntu
         pkgs.python3Packages.matplotlib
         playerctl
+        psmisc
         pyright
         python3
         qt6.qtdeclarative
