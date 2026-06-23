@@ -1,8 +1,8 @@
 {
     imports = [
         #keep-sorted start
-        ./zsh.nix
         ./fish.nix
+        ./zsh.nix
         #keep-sorted end
     ];
 }
