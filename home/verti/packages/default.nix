@@ -26,6 +26,7 @@
         glow
         gnumake
         grim
+        wf-recorder
         htop
         hyprshade
         imagemagick

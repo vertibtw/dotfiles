@@ -1,5 +1,7 @@
+// TODO: brightness control
 import qs
 import Quickshell
+import Quickshell.Io
 import QtQuick
 
 PopupWindow {
@@ -13,81 +15,52 @@ PopupWindow {
     anchor.window: parentWindow
     anchor.rect.x: parentWindow.width 
     anchor.rect.y: parentWindow.height * 1.1   
-
     grabFocus: true
 
-    Column {
-        id: items
-        spacing: 4
-        padding: 4
+    color: "transparent"
 
-        Rectangle {
-            id: nofilter
-            implicitHeight: nf_content.height * 1.2
-            implicitWidth: nf_content.width * 1.2
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    Quickshell.execDetached([
-                        "sh",
-                        "-c",
-                        `hyprctl eval 'hl.config({ decoration = { screen_shader = "" } })'`
-                    ])
-                }
-            }
-
-            Text {
-                id: nf_content
-                text: "no filter"
-                anchors.centerIn: parent
+    // to highlight the correct one after shell reload or whatever
+    // doesn't work if you run the command manuall, but who the fuck does that anyway
+    Process {
+        command: ["sh", "-c", "hyprctl -j getoption decoration:screen_shader"]
+        running: true
+        stdout: StdioCollector {
+            onStreamFinished: {
+                var obj = JSON.parse(this.text)
+                items.activeshader = obj.str
             }
         }
+    }
 
-        Rectangle {
-            id: grayscale
-            implicitHeight: gs_content.height * 1.2
-            implicitWidth: gs_content.width * 1.2
+    Rectangle {
+        anchors.fill: parent
+        color: Colors.background
+        Column {
+            id: items
+            property string activeshader: ""
+            spacing: 4
+            padding: 4
 
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    Quickshell.execDetached([
-                        "sh",
-                        "-c",
-                        `hyprctl eval 'hl.config({ decoration = { screen_shader = "/home/verti/dotfiles/home/verti/packages/wm/wayland/hyprland/shaders/grayscale.frag" } })'`
-                    ])
-                }
+            ShaderButton {
+                label: "no filter"
+                shader: ""
+                active: items.activeshader === shader
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Text {
-                id: gs_content
-                text: "grayscale"
-                anchors.centerIn: parent
-            }
-        }
-
-        Rectangle {
-            id: bl_filter // only yuri
-            implicitHeight: bl_content.height * 1.2
-            implicitWidth: bl_content.width * 1.2
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    Quickshell.execDetached([
-                        "sh",
-                        "-c",
-                        `hyprctl eval 'hl.config({ decoration = { screen_shader = "/home/verti/dotfiles/home/verti/packages/wm/wayland/hyprland/shaders/blue_light_filter.frag" } })'`
-                    ])
-                }
+            ShaderButton {
+                label: "grayscale"
+                shader: "/home/verti/.config/hypr/shaders/grayscale.frag"
+                active: items.activeshader === shader
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
-            Text {
-                id: bl_content
-                text: "blue light filter"
-                anchors.centerIn: parent
-            }
+            ShaderButton {
+                label: "blue light filter"
+                shader: "/home/verti/.config/hypr/shaders/blue_light_filter.frag"
+                active: items.activeshader === shader
+                anchors.horizontalCenter: parent.horizontalCenter
+            }            
         }
     }
 }
