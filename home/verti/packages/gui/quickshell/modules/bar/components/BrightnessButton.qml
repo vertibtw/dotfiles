@@ -12,7 +12,7 @@ Item {
 
     Text {
         id: icon
-        text: "󰃞"
+        text: "󰖨"
         color: Colors.foreground
         MouseArea {
             anchors.fill: parent

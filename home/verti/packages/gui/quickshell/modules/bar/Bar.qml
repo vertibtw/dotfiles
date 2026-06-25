@@ -6,6 +6,7 @@ import QtQuick.Layouts
 import qs
 import qs.modules.bar.components
 import qs.modules.bar.components.brightness
+
 Item {
     id: root
     width: childrenRect.width
