@@ -13,7 +13,6 @@ Item {
         folder: "file://" + root.dir
         showDirs: false
         nameFilters: root.extensions
-        onStatusChanged: if (status === FolderListModel.Ready) root.reroll()
     }
 
     function reroll() {

@@ -1,8 +1,8 @@
-// TODO: figure out how to make it not run on every single startup/reload, it's clogging io
 import qs
 import qs.util
 
 import Quickshell
+import Quickshell.Io
 import Quickshell.Hyprland
 import QtQuick
 
@@ -17,13 +17,14 @@ Item {
     RandomFile {
         id: randomwal
         dir: "/home/verti/Pictures/Wallpapers/"
+        onPathChanged: wallpaperCache.setText(path)
     }
 
-    Binding {
-        target: wal
-        property: "src"
-        value: randomwal.path
+    FileView {
+        id: wallpaperCache
+        path: "/home/verti/.wallpaper"
     }
+
 
     Rectangle {
         id: btn
