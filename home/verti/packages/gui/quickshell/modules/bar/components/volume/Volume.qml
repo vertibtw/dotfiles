@@ -26,37 +26,44 @@ PopupWindow {
 
     Rectangle {
         id: content
-        implicitWidth: r.width * 1.1
-        implicitHeight: r.height * 1.1
+        implicitWidth: r.width * 1.2
+        implicitHeight: r.height * 2
 
         color: Colors.background
 
         Row {
             id: r
             spacing: 4
-            Text {
-                text: {
-                    console.log("vol", vol)
-                    if (vol === 0) {
-                        return ""
-                    } else if (vol <= 35) {
-                        return "󰕿"
-                    } else if (vol <= 65) {
-                        return "󰖀"
-                    } else if (vol <= 100) {
-                        return "󰕾"
-                    } else {
-                        return "󰖁"
-                    }
-                }
-            }
+            anchors.centerIn: parent
 
             Slider {
                 id: slider
                 from: 0
                 to: 100
                 value: root.vol
+
+                anchors.verticalCenter: parent.verticalCenter
                 
+                background: Rectangle {
+                    id: bg
+                    color: Colors.grey
+                    implicitWidth: 100
+                    implicitHeight: root.parentWindow.height * 0.4 
+
+                    Rectangle {
+                        implicitHeight: parent.height
+                        implicitWidth: root.vol
+                        color: Colors.blue
+                    }
+                }
+
+                handle: Rectangle {
+                    x: slider.leftPadding + slider.visualPosition * (slider.availableWidth - width)
+                    implicitHeight: bg.height
+                    implicitWidth: height
+                    radius: 8
+                }
+
                 onMoved: {
                     if (Pipewire.defaultAudioSink)
                         Pipewire.defaultAudioSink.audio.volume = value / 100
