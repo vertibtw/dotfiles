@@ -6,6 +6,7 @@ import QtQuick.Layouts
 import qs
 import qs.modules.bar.components
 import qs.modules.bar.components.brightness
+import qs.modules.bar.components.volume
 
 Item {
     id: root
@@ -34,6 +35,11 @@ Item {
 
             Brightness {
                 id: brightness_popup
+                parentWindow: bar
+            }
+
+            Volume {
+                id: vol_popup
                 parentWindow: bar
             }
 
@@ -89,6 +95,7 @@ Item {
                     Clock {}
                     Tray {parentwindow: bar}
                     BrightnessButton{brightness_popup: brightness_popup}
+                    VolumeButton {volwidget: vol_popup}
                     Battery {}
                 }
             }
