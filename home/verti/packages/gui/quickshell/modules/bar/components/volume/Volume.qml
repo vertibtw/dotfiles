@@ -31,6 +31,7 @@ PopupWindow {
 
         color: Colors.background
 
+        // row stays for now
         Row {
             id: r
             spacing: 4
@@ -61,6 +62,8 @@ PopupWindow {
                     x: slider.leftPadding + slider.visualPosition * (slider.availableWidth - width)
                     implicitHeight: bg.height
                     implicitWidth: height
+                    border.color: Colors.blue
+                    border.width: 2
                     radius: 8
                 }
 
