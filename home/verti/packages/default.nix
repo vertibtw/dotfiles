@@ -21,11 +21,14 @@
         curl
         curl.dev
         fd
+        ffmpeg
         fzf
         gcc
         glow
         gnumake
         grim
+        gtk4-layer-shell
+        gtkmm4
         htop
         hyprshade
         imagemagick
@@ -34,8 +37,6 @@
         keep-sorted
         libnotify
         mission-center
-        gtkmm4
-        gtk4-layer-shell
         networkmanagerapplet
         nil
         nwg-look
@@ -60,13 +61,12 @@
         unzip
         vim
         wev
-        ffmpeg
-        yt-dlp
         wf-recorder
         wl-clipboard
         wl-gammactl
         xev
         yq
+        yt-dlp
         # keep-sorted end
     ];
 }
