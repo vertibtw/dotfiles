@@ -6,5 +6,9 @@
         ])
     ];
 
-    xdg.configFile."quickshell".source = ./quickshell;
+    xdg.configFile."quickshell" = {
+        source = inputs.qs-conf;
+        recursive = true;
+    };
+#    xdg.configFile."quickshell".source = ./quickshell;
 }

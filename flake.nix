@@ -14,14 +14,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    qs-conf = {
+      url = "github:vertibtw/quickshell";
+      flake = false;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixos-wsl = {
-      url = "github:nix-community/NixOS-WSl";
+      url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    kopuz-git = {
+      url = "github:Kopuz-org/kopuz";
+    };
+
+    shell = {
+      url = "github:vertibtw/notquickshell";
     };
   };
 

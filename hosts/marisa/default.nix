@@ -10,5 +10,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  networking.hostName = "marisa";
   system.stateVersion = "25.11";
 }

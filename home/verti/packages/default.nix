@@ -34,6 +34,8 @@
         keep-sorted
         libnotify
         mission-center
+        gtkmm4
+        gtk4-layer-shell
         networkmanagerapplet
         nil
         nwg-look
@@ -58,6 +60,8 @@
         unzip
         vim
         wev
+        ffmpeg
+        yt-dlp
         wf-recorder
         wl-clipboard
         wl-gammactl
