@@ -6,7 +6,7 @@
 
     hyprland-git = {
         url = "github:hyprwm/Hyprland";
-        inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
+        # inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
     };
 
     qs-git = {
