@@ -25,7 +25,6 @@
         fzf
         gcc
         glow
-        usbutils
         gnumake
         grim
         gtk4-layer-shell
@@ -60,6 +59,7 @@
         tree
         tty-clock
         unzip
+        usbutils
         vim
         wev
         wf-recorder
