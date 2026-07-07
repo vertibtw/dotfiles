@@ -14,8 +14,6 @@
                 cmp-nvim-lsp
                 cmp-buffer
                 cmp-path
-                mason-nvim
-                mason-lspconfig-nvim 
                 nvim-treesitter
                 telescope-nvim
                 telescope-fzf-native-nvim
@@ -86,6 +84,61 @@
       vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status)
       vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches)
       vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files)
+
+      -- this is here cuz I do not want to bother with doing what I did above.
+      local lspconfig = require('lspconfig')
+      local cmp_lsp = require('cmp_nvim_lsp')
+      local capabilities = cmp_lsp.default_capabilities()
+
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+        cmd = { "clangd" }, -- resolved from PATH, provided by extraPackages
+      })
+
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.nil_ls.setup({
+        capabilities = capabilities,
+      })
+
+      -- LSP keymaps, only active in buffers with an attached LSP
+      vim.api.nvim_create_autocmd('LspAttach', {
+        callback = function(args)
+          local opts = { buffer = args.buf }
+          vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+          vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+          vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+          vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+          vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+          vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+          vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
+          vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+          vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+          vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format({ async = true }) end, opts)
+        end,
+      })
+
+      -- nvim-cmp setup (autocompletion)
+      local cmp = require('cmp')
+      cmp.setup({
+        snippet = {
+          expand = function(args) end, -- you don't have a snippet engine plugin yet; leave empty or add LuaSnip
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<Tab>'] = cmp.mapping.select_next_item(),
+          ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        }),
+        sources = cmp.config.sources({
+          { name = 'nvim_lsp' },
+          { name = 'path' },
+        }, {
+          { name = 'buffer' },
+        }),
+      })
     '';
     extraPackages = with pkgs; [
         lua-language-server
