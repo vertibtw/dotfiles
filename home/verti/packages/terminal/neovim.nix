@@ -85,25 +85,24 @@
       vim.keymap.set('n', '<leader>gb', require('telescope.builtin').git_branches)
       vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files)
 
-      -- this is here cuz I do not want to bother with doing what I did above.
-      local lspconfig = require('lspconfig')
       local cmp_lsp = require('cmp_nvim_lsp')
       local capabilities = cmp_lsp.default_capabilities()
 
-      lspconfig.clangd.setup({
+      vim.lsp.config('clangd', {
         capabilities = capabilities,
-        cmd = { "clangd" }, -- resolved from PATH, provided by extraPackages
+        cmd = { "clangd" },
       })
 
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities,
-      })
-
-      lspconfig.nil_ls.setup({
+      vim.lsp.config('lua_ls', {
         capabilities = capabilities,
       })
 
-      -- LSP keymaps, only active in buffers with an attached LSP
+      vim.lsp.config('nil_ls', {
+        capabilities = capabilities,
+      })
+
+      vim.lsp.enable({ 'clangd', 'lua_ls', 'nil_ls' })
+
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
           local opts = { buffer = args.buf }
@@ -120,7 +119,7 @@
         end,
       })
 
-      -- nvim-cmp setup (autocompletion)
+      -- for completion
       local cmp = require('cmp')
       cmp.setup({
         snippet = {
@@ -139,7 +138,7 @@
           { name = 'buffer' },
         }),
       })
-    '';
+     '';
     extraPackages = with pkgs; [
         lua-language-server
         nil
