@@ -6,7 +6,7 @@
         ./notquickshell.nix
         ./quickshell.nix
         ./swappy.nix
-        ./tofi.nix
+        ./fuzzel.nix
         ./vesktop.nix
         ./vscode.nix
         #keep-sorted end

@@ -6,6 +6,9 @@
     text3 = "#acb4cd";
     text4 = "#9ca3b9";
     text5 = "#d9e0f7";
+    surface0 = "#313244";
+    surface1 = "#45475a";
+    subtext0 = "#a6adc8";
     gray = "#7f849c";
     red = "#f38ba8";
     blue = "#89b4fa";
