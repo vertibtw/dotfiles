@@ -1,6 +1,8 @@
 {
     imports = [
         #keep-sorted start
+        ./awww.nix
+        ./dunst.nix
         ./emacs.nix
         ./fuzzel.nix
         ./kopuz.nix

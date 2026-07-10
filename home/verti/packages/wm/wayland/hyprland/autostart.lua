@@ -2,6 +2,7 @@ local M = {}
 
 function M.init()
   hl.exec_cmd("kitty -e fastfetch")
+  hl.exec_cmd("awww-daemon")
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("nm-applet")
   hl.exec_cmd("vesktop -m --ozone-platform wayland --enable-blink-features=MiddleClickAutoscroll")

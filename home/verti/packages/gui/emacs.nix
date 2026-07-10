@@ -119,6 +119,8 @@
                   (kbd "<leader>fs") 'save-buffer
                   (kbd "<leader>e")  'neotree-toggle
                   (kbd "<leader>bb") 'consult-buffer
+                  (kbd "<leader>bp") 'buffer-previous
+                  (kbd "<leader>bn") 'buffer-next
                   (kbd "<leader>bk") 'kill-buffer
                   (kbd "<leader>wv") 'split-window-right
                   (kbd "<leader>ws") 'split-window-below
