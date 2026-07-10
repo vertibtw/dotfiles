@@ -5,8 +5,9 @@ function M.init()
   hl.exec_cmd("awww-daemon")
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("nm-applet")
+  hl.exec_cmd("dunst")
   hl.exec_cmd("vesktop -m --ozone-platform wayland --enable-blink-features=MiddleClickAutoscroll")
-  hl.exec_cmd("qs")
+  hl.exec_cmd("shell")
 
   for i = 0, 20 do
     hl.exec_cmd("hyprctl notify 1 2000 0 hello")
