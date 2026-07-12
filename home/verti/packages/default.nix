@@ -21,6 +21,7 @@
         cmake
         curl
         curl.dev
+        kdePackages.dolphin
         fd
         ffmpeg
         fzf

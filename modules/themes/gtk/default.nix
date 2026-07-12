@@ -1,0 +1,52 @@
+{ colors, ...}:
+{
+  gtk3 = ''
+    @define-color theme_bg_color ${colors.background2};
+    @define-color theme_fg_color ${colors.text1};
+    @define-color theme_base_color ${colors.background};
+    @define-color theme_text_color ${colors.text1};
+    @define-color theme_selected_bg_color ${colors.purple};
+    @define-color theme_selected_fg_color ${colors.background};
+    @define-color insensitive_bg_color ${colors.surface0};
+    @define-color insensitive_fg_color ${colors.subtext0};
+    @define-color insensitive_base_color ${colors.background2};
+    @define-color borders ${colors.surface1};
+    @define-color warning_color ${colors.yellow};
+    @define-color error_color ${colors.red};
+    @define-color success_color ${colors.green};
+  '';
+
+  gtk4 = ''
+    @define-color accent_color ${colors.purple};
+    @define-color accent_bg_color ${colors.purple};
+    @define-color accent_fg_color ${colors.background};
+    @define-color destructive_color ${colors.red};
+    @define-color destructive_bg_color ${colors.red};
+    @define-color destructive_fg_color ${colors.background};
+    @define-color success_color ${colors.green};
+    @define-color success_bg_color ${colors.green};
+    @define-color success_fg_color ${colors.background};
+    @define-color warning_color ${colors.yellow};
+    @define-color warning_bg_color ${colors.yellow};
+    @define-color warning_fg_color ${colors.background};
+    @define-color error_color ${colors.red};
+    @define-color error_bg_color ${colors.red};
+    @define-color error_fg_color ${colors.background};
+    @define-color window_bg_color ${colors.background};
+    @define-color window_fg_color ${colors.text1};
+    @define-color view_bg_color ${colors.background2};
+    @define-color view_fg_color ${colors.text1};
+    @define-color headerbar_bg_color ${colors.background2};
+    @define-color headerbar_fg_color ${colors.text1};
+    @define-color headerbar_border_color ${colors.surface0};
+    @define-color headerbar_shade_color ${colors.surface0};
+    @define-color card_bg_color ${colors.surface0};
+    @define-color card_fg_color ${colors.text1};
+    @define-color dialog_bg_color ${colors.background2};
+    @define-color dialog_fg_color ${colors.text1};
+    @define-color popover_bg_color ${colors.background2};
+    @define-color popover_fg_color ${colors.text1};
+    @define-color shade_color ${colors.surface0};
+    @define-color scrollbar_outline_color ${colors.surface1};
+  '';
+}
