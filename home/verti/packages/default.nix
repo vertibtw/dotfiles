@@ -21,9 +21,6 @@
         cmake
         curl
         curl.dev
-        kdePackages.dolphin
-        kdePackages.qt6ct
-        libsForQt5.qt5ct
         fd
         ffmpeg
         fzf
@@ -38,11 +35,14 @@
         imagemagick
         jq
         just
+        kdePackages.dolphin
+        kdePackages.qt6ct
         keep-sorted
         libnotify
+        libsForQt5.qt5ct
         mission-center
-        networkmanagerapplet
         nautilus
+        networkmanagerapplet
         nil
         nwg-look
         obs-studio
@@ -61,9 +61,9 @@
         slurp
         spotify
         texstudio
+        thunar
         tree
         tty-clock
-        thunar
         unzip
         usbutils
         vim
