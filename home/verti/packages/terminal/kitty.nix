@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, theme, ... }:
 {
     programs.kitty = {
         enable = true;
@@ -9,35 +9,32 @@
 
             window_padding_width = 0; # neovim fix sort of
 
-
-            # colors (sort of amoled catppuccin)
-
-            cursor = "#f5e0dc";
+            cursor = theme.colors.text1;
 
             # black:
-            color0 = "#000000";
-            color8 = "#000000";
+            color0 = theme.colors.background;
+            color8 = theme.colors.background2;
             # red:
-            color1 = "#f38ba8";
-            color9 = "#eba0ac";
+            color1 = theme.colors.red;
+            color9 = theme.colors.orange;
             # green:
-            color2 = "#a6e3a1";
-            color10 = "#94e2d5";
+            color2 = theme.colors.green;
+            color10 = theme.colors.cyan;
             # yellow:
-            color3 = "#f9e2af";
-            color11 = "#fab387";
+            color3 = theme.colors.yellow;
+            color11 = theme.colors.orange;
             # blue:
-            color4 = "#89b4fa";
-            color12 = "#74c7ec";
+            color4 = theme.colors.blue;
+            color12 = theme.colors.cyan;
             # magenta:
-            color5 = "#cba6f7";
-            color13 = "#f5c2e7";
+            color5 = theme.colors.pink;
+            color13 = theme.colors.purple;
             # cyan:
-            color6 = "#89dceb";
-            color14 = "#94e2d5";
+            color6 = theme.colors.blue;
+            color14 = theme.colors.cyan;
             # white:
-            color7 = "#cdd6f4";
-            color15 = "#b4befe";
+            color7 = theme.colors.text1;
+            color15 = theme.colors.text2;
         };
     };
 }

@@ -10,6 +10,7 @@ function M.init()
   hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
   hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(apps.filemgr))
   hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(apps.screenshot))
+  hl.bind(mainMod .. "+ C", hl.dsp.exec_cmd(apps.clipboardmgr))
   hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('if pgrep -x "' .. apps.menu .. '" > /dev/null; then pkill -x ' .. apps.menu .. '; else ' .. apps.menu .. ' ' .. '; fi'))
 
   hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))

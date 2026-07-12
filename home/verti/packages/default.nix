@@ -19,6 +19,7 @@
         clang-tools
         cmake
         curl
+        cliphist
         curl.dev
         fd
         ffmpeg

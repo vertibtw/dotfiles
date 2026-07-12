@@ -27,7 +27,10 @@ function M.init()
               enabled      = false,
           },
           blur = {
-              enabled   = false,
+              enabled   = true,
+              size = 8,
+              passes = 3,
+              noise = 0.02
           },
       },
   })

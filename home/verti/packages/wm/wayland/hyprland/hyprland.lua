@@ -5,6 +5,7 @@ local monitors      = require("monitors")
 local input         = require("input")
 local init          = require("autostart")
 local env           = require("env")
+local wr            = require("windowrules")
 
 -- everything is functions because uh it looked cooler uh
 -- it's probably not the meta on like r/unixcuckporn but
@@ -16,5 +17,6 @@ animations.init()
 monitors.init()
 input.init()
 env.init()
+wr.init()
 
 hl.on("hyprland.start", init.init)
