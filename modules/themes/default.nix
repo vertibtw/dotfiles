@@ -24,4 +24,5 @@ in
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠁⣛⠓⢒⣒⣢⡭⢁⡈⠿⠿⠟⠹⠛⠁⠀⠀⠀⠰⠃⠂⠀⠀⠀";
     emacs = import ./emacs {inherit colors;};
     gtk   = import ./gtk   {inherit colors;};
+    qt    = import ./qt    {inherit colors;};
 }

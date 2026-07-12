@@ -22,6 +22,8 @@
         curl
         curl.dev
         kdePackages.dolphin
+        kdePackages.qt6ct
+        libsForQt5.qt5ct
         fd
         ffmpeg
         fzf
@@ -40,6 +42,7 @@
         libnotify
         mission-center
         networkmanagerapplet
+        nautilus
         nil
         nwg-look
         obs-studio
@@ -47,7 +50,7 @@
         osu-lazer-bin
         pkg-config
         pkgs.nerd-fonts.ubuntu
-        pkgs.python3Packages.matplotlib
+#        pkgs.python3Packages.matplotlib
         playerctl
         psmisc
         pyright
@@ -60,6 +63,7 @@
         texstudio
         tree
         tty-clock
+        thunar
         unzip
         usbutils
         vim

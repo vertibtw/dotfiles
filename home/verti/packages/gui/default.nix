@@ -10,6 +10,7 @@
         ./quickshell.nix
         ./swappy.nix
         ./gtk.nix
+        ./qt.nix
         ./vesktop.nix
         ./vscode.nix
         #keep-sorted end

@@ -1,6 +1,22 @@
 { colors, ...}:
 {
   gtk3 = ''
+    @define-color window_bg_color ${colors.background};
+    @define-color window_fg_color ${colors.text1};
+    @define-color view_bg_color ${colors.background2};
+    @define-color view_fg_color ${colors.text1};
+    @define-color headerbar_bg_color ${colors.background2};
+    @define-color headerbar_fg_color ${colors.text1};
+    @define-color headerbar_border_color ${colors.surface0};
+    @define-color headerbar_shade_color ${colors.surface0};
+    @define-color card_bg_color ${colors.surface0};
+    @define-color card_fg_color ${colors.text1};
+    @define-color dialog_bg_color ${colors.background2};
+    @define-color dialog_fg_color ${colors.text1};
+    @define-color popover_bg_color ${colors.background2};
+    @define-color popover_fg_color ${colors.text1};
+    @define-color shade_color ${colors.surface0};
+    @define-color scrollbar_outline_color ${colors.surface1};
     @define-color theme_bg_color ${colors.background2};
     @define-color theme_fg_color ${colors.text1};
     @define-color theme_base_color ${colors.background};
