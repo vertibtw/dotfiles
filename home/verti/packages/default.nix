@@ -17,9 +17,9 @@
         brave
         brightnessctl
         clang-tools
+        cliphist
         cmake
         curl
-        cliphist
         curl.dev
         fd
         ffmpeg
