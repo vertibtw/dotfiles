@@ -13,7 +13,7 @@
 
             # black:
             color0 = theme.colors.background;
-            color8 = theme.colors.background2;
+            color8 = theme.colors.background;
             # red:
             color1 = theme.colors.red;
             color9 = theme.colors.orange;
@@ -35,6 +35,8 @@
             # white:
             color7 = theme.colors.text1;
             color15 = theme.colors.text2;
+
+            background = theme.colors.background;
         };
     };
 }
