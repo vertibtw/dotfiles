@@ -8,7 +8,6 @@
     withPerl = false;
     withNodeJs = false;
     plugins = with pkgs.vimPlugins; [
-                # TODO configure lsp idk
                 nvim-lspconfig
                 nvim-cmp
                 cmp-nvim-lsp
@@ -138,6 +137,14 @@
           { name = 'buffer' },
         }),
       })
+
+      -- clang stuff
+      vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = { '*.c', '*.cpp', '*.h', '*.hpp' },
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
+     })
      '';
     extraPackages = with pkgs; [
         lua-language-server
