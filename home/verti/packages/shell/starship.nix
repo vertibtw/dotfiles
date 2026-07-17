@@ -14,8 +14,8 @@
         command = "whoami | cut -c1";
         when = true;
         format = "[$output](bold blue)";
-      };
-      hostname = {
+          };
+                                          hostname = {
         ssh_only = false;
         format = "@[$hostname](bold yellow) ";
         trim_at = "";
