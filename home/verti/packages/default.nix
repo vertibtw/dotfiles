@@ -16,6 +16,7 @@
     blueman
     brave
     brightnessctl
+    cargo
     clang-tools
     cliphist
     cmake
@@ -61,10 +62,9 @@
     qt6.qttools
     ripgrep
     rustc
-    cargo
     slurp
-    swaylock
     spotify
+    swaylock
     texstudio
     thunar
     tree
