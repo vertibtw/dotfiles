@@ -1,24 +1,15 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, profile,... }:
 {
   imports = [
-    ./gui
     ./shell
     ./terminal
-    ./wm
-    ./cursors
-  ];
+  ] ++ lib.optionals(profile == "desktop") [ ./gui ./cursors ./wm ];
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     # keep-sorted start
-    alsa-lib
-    audacity
     bear
-    blueman
-    brave
-    brightnessctl
     cargo
     clang-tools
-    cliphist
     cmake
     curl
     curl.dev
@@ -28,57 +19,66 @@
     gcc
     glow
     gnumake
-    grim
-    gtk4-layer-shell
-    gtkmm4
     hare
-    htop
-    hyprshade
     imagemagick
     jq
     just
+    keep-sorted
+    nil
+    nixfmt
+    openssl
+    pkg-config
+    pkgs.nerd-fonts.ubuntu
+    psmisc
+    pyright
+    python3
+    ripgrep
+    rustc
+    tree
+    tty-clock
+    unzip
+    vim
+   yq
+    yt-dlp
+    # keep-sorted end
+  ] ++ lib.optionals(profile == "desktop") [
+    #keep-sorted start
+    alsa-lib
+    audacity
+    blueman
+    brave
+    brightnessctl
+    cliphist
+    grim
+    gtk4-layer-shell
+    gtkmm4
+    htop
+    hyprshade
     kdePackages.dolphin
     kdePackages.qt6ct
-    keep-sorted
     libnotify
     libsForQt5.qt5ct
     mission-center
     nautilus
     networkmanagerapplet
-    nil
-    nixfmt
     nwg-look
     obs-studio
-    openssl
+    pkgs.python3Packages.matplotlib
     osu-lazer-bin
-    pkg-config
-    pkgs.nerd-fonts.ubuntu
-    #        pkgs.python3Packages.matplotlib
     playerctl
-    psmisc
-    pyright
-    python3
     qt6.qtdeclarative
     qt6.qttools
-    ripgrep
-    rustc
     slurp
     spotify
     swaylock
     texstudio
     thunar
-    tree
-    tty-clock
-    unzip
     usbutils
-    vim
     wev
     wf-recorder
     wl-clipboard
     wl-gammactl
     xev
-    yq
-    yt-dlp
     # keep-sorted end
   ];
 }

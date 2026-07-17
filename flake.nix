@@ -52,16 +52,14 @@
       nixosConfigurations = {
         reimu = mkHost {
           hostname = "reimu";
-          hmProfile = import ./modules/nixos/profiles/desktop.nix;
           extraArgs = {
-            isWsl = false;
+            profile = "desktop";
           };
         };
         marisa = mkHost {
           hostname = "marisa";
-          hmProfile = import ./modules/nixos/profiles/wsl.nix;
           extraArgs = {
-            isWsl = true;
+            profile = "wsl";
           };
         };
       };

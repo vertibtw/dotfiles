@@ -7,7 +7,6 @@
 {
   hostname,
   system ? "x86_64-linux",
-  hmProfile,
   extraArgs ? { },
 }:
 nixpkgs.lib.nixosSystem {
@@ -27,7 +26,7 @@ nixpkgs.lib.nixosSystem {
         theme = import ../modules/themes;
       }
       // extraArgs;
-      home-manager.users.verti = hmProfile;
+      home-manager.users.verti = ../home/verti;
     }
   ];
 }
