@@ -1,5 +1,5 @@
 {
-    imports = [
-        ../../../home/verti # default.nix files just include everything
-    ];
+  imports = [
+    ../../../home/verti # default.nix files just include everything
+  ];
 }

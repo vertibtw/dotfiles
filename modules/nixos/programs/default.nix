@@ -1,3 +1,7 @@
 {
-    imports = [ ./zsh.nix ./fish.nix ./kopuz.nix ];
+  imports = [
+    ./zsh.nix
+    ./fish.nix
+    ./kopuz.nix
+  ];
 }

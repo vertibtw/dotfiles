@@ -1,3 +1,3 @@
 {
-    imports = [ ./verti.nix ];
+  imports = [ ./verti.nix ];
 }

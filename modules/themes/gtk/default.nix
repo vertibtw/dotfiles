@@ -1,4 +1,4 @@
-{ colors, ...}:
+{ colors, ... }:
 {
   gtk3 = ''
     @define-color window_bg_color ${colors.background};

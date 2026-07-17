@@ -1,3 +1,6 @@
 {
-    imports = [ ./fontconfig.nix ./fonts.nix ];
+  imports = [
+    ./fontconfig.nix
+    ./fonts.nix
+  ];
 }

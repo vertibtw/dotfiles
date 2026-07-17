@@ -1,4 +1,5 @@
-{ colors }: let
+{ colors }:
+let
   base = ''
     [Appearance]
     style=Fusion
@@ -77,7 +78,8 @@
     disabled[18]=${colors.subtext0}
     disabled[19]=${colors.surface1}
   '';
-in {
+in
+{
   main = base;
   inherit palette;
 }

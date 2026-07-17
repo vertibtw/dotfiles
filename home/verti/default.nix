@@ -1,4 +1,10 @@
-{ lib, isWsl, config, pkgs, ... }:
+{
+  lib,
+  isWsl,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   home.username = "verti";
@@ -8,5 +14,6 @@
 
   imports = [
     ./sessionVariables.nix
-  ] ++  lib.optionals (!isWsl) [./packages];
+  ]
+  ++ lib.optionals (!isWsl) [ ./packages ];
 }

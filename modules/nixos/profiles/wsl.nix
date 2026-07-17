@@ -1,10 +1,10 @@
 {
-    imports = [
-    	../../../home/verti/default.nix
-        ../../../home/verti/packages/shell/fish.nix # fih :wiltedroseemoji:
-        ../../../home/verti/packages/terminal/fastfetch.nix
-        ../../../home/verti/packages/terminal/git.nix
-        ../../../home/verti/packages/terminal/neovim.nix
-        ../../../home/verti/packages/terminal/ssh.nix
-    ];
+  imports = [
+    ../../../home/verti/default.nix
+    ../../../home/verti/packages/shell/fish.nix # fih :wiltedroseemoji:
+    ../../../home/verti/packages/terminal/fastfetch.nix
+    ../../../home/verti/packages/terminal/git.nix
+    ../../../home/verti/packages/terminal/neovim.nix
+    ../../../home/verti/packages/terminal/ssh.nix
+  ];
 }

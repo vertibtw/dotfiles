@@ -1,3 +1,6 @@
 {
-    imports = [ ./bootloader.nix ./kernelpackages.nix];
+  imports = [
+    ./bootloader.nix
+    ./kernelpackages.nix
+  ];
 }

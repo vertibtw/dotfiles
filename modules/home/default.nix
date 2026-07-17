@@ -1,3 +1,3 @@
 {
-    imports = [ ./users ];
+  imports = [ ./users ];
 }

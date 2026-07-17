@@ -1,8 +1,8 @@
 { pkgs, inputs, ... }:
-{ 
-    home.packages = [
-        inputs.hyprland-git.packages.${pkgs.system}.hyprland
-    ];
+{
+  home.packages = [
+    inputs.hyprland-git.packages.${pkgs.system}.hyprland
+  ];
 
-    xdg.configFile."hypr".source = ./hyprland;
+  xdg.configFile."hypr".source = ./hyprland;
 }

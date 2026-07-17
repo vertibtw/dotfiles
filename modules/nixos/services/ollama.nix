@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
-    services.ollama = {
-        enable = true;
-        loadModels = [ "mistral" ];
-    };
+  services.ollama = {
+    enable = true;
+    loadModels = [ "mistral" ];
+  };
 }

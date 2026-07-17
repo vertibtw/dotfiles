@@ -5,8 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     hyprland-git = {
-        url = "github:hyprwm/Hyprland";
-        # inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
+      url = "github:hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
     };
 
     qs-git = {
@@ -38,22 +38,32 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
-  let
-    mkHost = import ./lib/mkHost.nix { inherit inputs home-manager nixpkgs; };
-  in
-  {
-    nixosConfigurations = {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      mkHost = import ./lib/mkHost.nix { inherit inputs home-manager nixpkgs; };
+    in
+    {
+      nixosConfigurations = {
         reimu = mkHost {
-            hostname = "reimu";
-            hmProfile = import ./modules/nixos/profiles/desktop.nix;
-            extraArgs = { isWsl = false; };
+          hostname = "reimu";
+          hmProfile = import ./modules/nixos/profiles/desktop.nix;
+          extraArgs = {
+            isWsl = false;
+          };
         };
         marisa = mkHost {
-            hostname = "marisa";
-            hmProfile = import ./modules/nixos/profiles/wsl.nix;
-            extraArgs = { isWsl = true; };
+          hostname = "marisa";
+          hmProfile = import ./modules/nixos/profiles/wsl.nix;
+          extraArgs = {
+            isWsl = true;
+          };
         };
+      };
     };
-  };
 }
