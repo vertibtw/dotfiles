@@ -63,8 +63,8 @@
     networkmanagerapplet
     nwg-look
     obs-studio
-    pkgs.python3Packages.matplotlib
     osu-lazer-bin
+    pkgs.python3Packages.matplotlib
     playerctl
     qt6.qtdeclarative
     qt6.qttools
