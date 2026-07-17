@@ -3,6 +3,7 @@
   programs.starship = {
     enable = true;
     settings = {
+      add_newline = false;
       format = ''
         ''${custom}$hostname$directory$git_branch$git_status$character
       '';
