@@ -16,6 +16,6 @@ It follows the basic structure of:
 └── modules - reusable modules
 ```
 
-glory to keep-sorted
+glory to systemd
 
 ---
