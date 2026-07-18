@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   home.packages = [
-    (inputs.qs-git.packages.${pkgs.system}.default.withModules [
+    (inputs.qs-git.packages.${pkgs.stdenv.hostPlatform.system}.default.withModules [
       pkgs.qt6.qtdeclarative # for the QtQuick.Layouts
     ])
   ];
@@ -10,5 +10,4 @@
     source = inputs.qs-conf;
     recursive = true;
   };
-  #    xdg.configFile."quickshell".source = ./quickshell;
 }

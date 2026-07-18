@@ -14,6 +14,7 @@ let
 in
 {
   home.pointerCursor = {
+    enable = true;
     name = "xp-cursor";
     package = xp-cursor;
     size = 24;
