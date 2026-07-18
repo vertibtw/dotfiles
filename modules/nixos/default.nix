@@ -1,14 +1,14 @@
 {
   imports = [
     # keep-sorted start
-    ./services
-    ./security
-    ./fonts
-    ./programs
-    ./locale.nix
     ./boot
     ./devices.nix
+    ./fonts
+    ./locale.nix
     ./networking.nix
+    ./programs
+    ./security
+    ./services
     ./settings.nix
     # keep-sorted end
   ];

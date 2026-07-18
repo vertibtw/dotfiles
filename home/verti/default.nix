@@ -9,8 +9,8 @@
 
   imports = [
     # keep-sorted start
-    ./sessionVariables.nix
     ./packages
+    ./sessionVariables.nix
     # keep-sorted end
   ];
 }

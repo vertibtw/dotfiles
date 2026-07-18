@@ -13,8 +13,8 @@
   ]
   ++ lib.optionals (profile == "desktop") [
     # keep-sorted start
-    ./gui
     ./cursors
+    ./gui
     ./wm
     # keep-sorted end
   ];
