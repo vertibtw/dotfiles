@@ -1,5 +1,6 @@
 {
   imports = [
+    # keep-sorted start
     ./services
     ./security
     ./fonts
@@ -9,5 +10,6 @@
     ./devices.nix
     ./networking.nix
     ./settings.nix
+    # keep-sorted end
   ];
 }

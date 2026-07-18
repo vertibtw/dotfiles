@@ -6,13 +6,17 @@
 }:
 {
   imports = [
+    # keep-sorted start
     ./shell
     ./terminal
+    # keep-sorted end
   ]
   ++ lib.optionals (profile == "desktop") [
+    # keep-sorted start
     ./gui
     ./cursors
     ./wm
+    # keep-sorted end
   ];
   fonts.fontconfig.enable = true;
   home.packages =
