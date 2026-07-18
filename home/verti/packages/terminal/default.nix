@@ -7,11 +7,13 @@
     ./neovim.nix
     ./ssh.nix
     #keep-sorted end
-  ] ++ lib.optionals(profile == "desktop") [
+  ]
+  ++ lib.optionals (profile == "desktop") [
     #keep-sorted start
     ./kitty.nix
     #keep-sorted end
-  ] ++ lib.optionals(profile == "wsl") [
+  ]
+  ++ lib.optionals (profile == "wsl") [
     #keep-sorted start
     ./zellij.nix
     #keep-sorted end
