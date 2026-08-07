@@ -13,11 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: DeterminateSystems/determinate-nix-action@v3
+      - run: git pull
       - run: nix flake update
       - name: Commit and push if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "vertibtw"
+          git config user.email "12345678+vertibtw@users.noreply.github.com"
           git add flake.lock
-          git diff --staged --quiet || git commit -m "flake.lock: Update"
+          git diff --staged --quiet || git commit -m "update"
           git push
