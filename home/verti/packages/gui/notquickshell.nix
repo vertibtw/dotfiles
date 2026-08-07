@@ -6,7 +6,6 @@
     settings = {
       theme = "catppuccin mocha";
       bar = {
-        position = "top";
         thickness = 20;
         margin-left = 300;
         margin-right = 300;
