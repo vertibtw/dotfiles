@@ -7,10 +7,6 @@ local init          = require("autostart")
 local env           = require("env")
 local wr            = require("windowrules")
 
--- everything is functions because uh it looked cooler uh
--- it's probably not the meta on like r/unixcuckporn but
--- unfortunately I do not give a fuck
-
 general.init()
 binds.init()
 animations.init()
