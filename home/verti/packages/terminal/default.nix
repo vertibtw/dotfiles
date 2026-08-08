@@ -6,6 +6,7 @@
     ./git.nix
     ./neovim.nix
     ./ssh.nix
+    ./cava.nix
     #keep-sorted end
   ]
   ++ lib.optionals (profile == "desktop") [
