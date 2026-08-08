@@ -7,7 +7,7 @@
     ./fuzzel.nix
     ./gtk.nix
     ./kopuz.nix
-    ./notquickshell.nix
+    ./vbar.nix
     ./qt.nix
     ./quickshell.nix
     ./swappy.nix

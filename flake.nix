@@ -33,8 +33,8 @@
       url = "github:Kopuz-org/kopuz";
     };
 
-    shell = {
-      url = "github:vertibtw/notquickshell";
+    vbar = {
+      url = "github:vertibtw/vbar";
     };
   };
 

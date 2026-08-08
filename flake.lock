@@ -588,7 +588,7 @@
         "nixpkgs": "nixpkgs_3",
         "qs-conf": "qs-conf",
         "qs-git": "qs-git",
-        "shell": "shell"
+        "vbar": "vbar"
       }
     },
     "rust-overlay": {
@@ -612,24 +612,6 @@
         "type": "github"
       }
     },
-    "shell": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "lastModified": 1784369353,
-        "narHash": "sha256-MTkoPiii1ozN4Kpg6o4C/yEpj1Co/4oFe8Hi6w+Me4Q=",
-        "owner": "vertibtw",
-        "repo": "notquickshell",
-        "rev": "7b14d9f32d7710f5f543ccdd54061ac65862e021",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vertibtw",
-        "repo": "notquickshell",
-        "type": "github"
-      }
-    },
     "systems": {
       "locked": {
         "lastModified": 1689347949,
@@ -642,6 +624,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "vbar": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1786188554,
+        "narHash": "sha256-l4InWXVMjvVfn/2ta8I4Ch7oM0t1nJTwNOpK0GMcp+4=",
+        "owner": "vertibtw",
+        "repo": "vbar",
+        "rev": "fc36a7b39b1aa693efa962ff6138c7e13cf24c97",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vertibtw",
+        "repo": "vbar",
         "type": "github"
       }
     },

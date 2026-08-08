@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
-  imports = [ inputs.shell.homeManagerModules.default ];
-  programs.notquickshell = {
+  imports = [ inputs.vbar.homeManagerModules.default ];
+  programs.vbar = {
     enable = true;
     settings = {
       theme = "catppuccin mocha";
