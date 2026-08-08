@@ -5,8 +5,8 @@ warcrimes against the nix community
 
 ---
 
-This repository contains my personal nixos configs (please don't actually try to use it).
-
+This repository contains my nixos configs.
+also is very messy uh.
 It follows the basic structure of:
 ```
 .
@@ -17,5 +17,9 @@ It follows the basic structure of:
 ```
 
 glory to systemd
+
+here's an anime grill:
+
+![coolgifofananimegirl](assets/gif.gif)
 
 ---
