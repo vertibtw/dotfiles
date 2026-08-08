@@ -7,10 +7,10 @@
     ./fuzzel.nix
     ./gtk.nix
     ./kopuz.nix
-    ./vbar.nix
     ./qt.nix
     ./quickshell.nix
     ./swappy.nix
+    ./vbar.nix
     ./vesktop.nix
     ./vscode.nix
     #keep-sorted end
