@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/determinate-nix-action@v3
-      - run: git pull
+      - run: git pull --rebase
       - run: nix shell nixpkgs#nixfmt --command bash -c "find . -name '*.nix' -exec nixfmt {} +"
       - run: |
           git config user.name "vertibtw"
