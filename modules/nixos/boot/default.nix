@@ -2,7 +2,7 @@
   imports = [
     # keep-sorted start
     ./bootloader.nix
-    ./kernelpackages.nix
+    ./kernel.nix
     # keep-sorted end
   ];
 }
