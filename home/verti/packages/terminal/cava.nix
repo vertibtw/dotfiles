@@ -1,11 +1,11 @@
 { ... }:
 {
-    programs.cava = {
-        enable = true;
-        settings = {
-            color = {
-                foreground = "magenta";
-            };
-        };
+  programs.cava = {
+    enable = true;
+    settings = {
+      color = {
+        foreground = "magenta";
+      };
     };
+  };
 }
