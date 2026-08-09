@@ -66,6 +66,7 @@
       brave
       brightnessctl
       cliphist
+      dconf
       grim
       gtk4-layer-shell
       gtkmm4
