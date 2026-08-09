@@ -1,6 +1,7 @@
 {
   imports = [
     #keep-sorted start
+    ./bluetooth.nix
     ./displaymanager.nix
     ./docker.nix
     ./fwupd.nix
