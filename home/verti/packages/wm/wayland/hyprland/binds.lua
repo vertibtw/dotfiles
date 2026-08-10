@@ -4,12 +4,13 @@ local M = {}
 function M.init()
   local mainMod = "SUPER"
 
-    hl.bind(mainMod .. "+ SHIFT + RETURN", hl.dsp.exec_cmd(apps.terminal))
+  hl.bind(mainMod .. "+ SHIFT + RETURN", hl.dsp.exec_cmd(apps.terminal))
   hl.bind(mainMod .. "+ SHIFT + C", hl.dsp.window.close())
 
   hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
   hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(apps.filemgr))
   hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(apps.screenshot))
+  hl.bind(mainMod .. "+ ESCAPE", hl.dsp.exec_cmd(apps.lockscreen))
 
   local shaders = { "", "/home/verti/.config/hypr/shaders/grayscale.frag", "/home/verti/.config/hypr/shaders/blue_light_filter.frag"}
   local shaderIdx = 1
