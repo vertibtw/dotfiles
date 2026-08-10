@@ -17,6 +17,9 @@
       inputs.hyprland-git.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
-    config.common.default = [ "hyprland" "gtk" ];
+    config.common.default = [
+      "hyprland"
+      "gtk"
+    ];
   };
 }
