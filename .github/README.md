@@ -1,5 +1,5 @@
-# dotfiles
-warcrimes against the nix community
+# <p align="center">dotfiles</p>
+<p align="center">warcrimes against the nix community</p>
 
 ![screenshot](assets/screenshot.png)
 

@@ -193,6 +193,7 @@ in
 
     hl.bind(mainMod .. "+ SHIFT + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
     hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(apps.filemgr))
+    hl.bind(mainMod .. " + F9", hl.dsp.exec_cmd('awww img -t none "$(shuf -n1 -e ~/Pictures/Wallpapers/*.{jpg,jpeg,png,gif,webp})"'))
     hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(apps.screenshot))
     hl.bind(mainMod .. "+ ESCAPE", hl.dsp.exec_cmd(apps.lockscreen))
 
