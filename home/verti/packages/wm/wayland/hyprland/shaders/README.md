@@ -1,1 +1,0 @@
-I'm the greatest copy-paster alive
