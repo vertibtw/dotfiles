@@ -13,6 +13,7 @@
     ./vbar.nix
     ./vesktop.nix
     ./vscode.nix
+    ./zathura.nix
     #keep-sorted end
   ];
 }
