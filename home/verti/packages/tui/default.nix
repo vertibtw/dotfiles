@@ -1,6 +1,6 @@
 { lib, profile, ... }:
 {
- imports = [
+  imports = [
     ./eza.nix
     ./git.nix
     ./ssh.nix
@@ -9,10 +9,12 @@
     ./neovim.nix
     ./starship.nix
     ./fastfetch.nix
- ] ++ lib.optionals (profile == "desktop") [
+  ]
+  ++ lib.optionals (profile == "desktop") [
     ./kitty.nix
     ./cava.nix
- ] ++ lib.optionals (profile == "wsl") [
+  ]
+  ++ lib.optionals (profile == "wsl") [
     ./zellij.nix
- ];
+  ];
 }
