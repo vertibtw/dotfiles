@@ -7,8 +7,7 @@
 {
   imports = [
     # keep-sorted start
-    ./shell
-    ./terminal
+    ./tui
     # keep-sorted end
   ]
   ++ lib.optionals (profile == "desktop") [

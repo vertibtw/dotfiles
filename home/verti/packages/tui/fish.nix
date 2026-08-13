@@ -3,6 +3,7 @@
   programs.fish = {
     enable = true;
     shellAliases = {
+      ls = "eza";
       g = "git";
       gc = "git commit -m";
       gp = "git push";
