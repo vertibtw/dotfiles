@@ -6,6 +6,7 @@
     ./emacs.nix
     ./fuzzel.nix
     ./gtk.nix
+    ./hyprlock.nix
     ./kopuz.nix
     ./qt.nix
     ./quickshell.nix
