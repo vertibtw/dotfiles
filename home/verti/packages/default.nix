@@ -59,6 +59,8 @@
     ]
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
+      (wf-recorder.override {
+        ffmpeg = ffmpeg_7;
       alsa-lib
       audacity
       blueman
@@ -93,12 +95,10 @@
       thunar
       usbutils
       wev
-      (wf-recorder.override {
-        ffmpeg = ffmpeg_7;
-      })
       wl-clipboard
       wl-gammactl
       xev
+      })
       # keep-sorted end
     ];
 }
