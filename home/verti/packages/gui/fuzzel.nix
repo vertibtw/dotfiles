@@ -1,4 +1,4 @@
-{ pkgs, theme, ... }:
+{ theme, ... }:
 let
   rgba = c: builtins.substring 1 6 c + "ff";
 in
@@ -8,8 +8,8 @@ in
     settings = {
       main = {
         font = "Scientifica:size=14";
-        prompt = "run: ";
-        lines = 8;
+        prompt = ">";
+        lines = 10;
         width = 40;
         horizontal-pad = 20;
         vertical-pad = 20;
@@ -30,7 +30,7 @@ in
       };
       border = {
         width = 2;
-        radius = 10;
+        radius = 0;
       };
     };
   };
