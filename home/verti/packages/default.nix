@@ -70,6 +70,7 @@
       gtk4-layer-shell
       gtkmm4
       htop
+      hyprpicker
       hyprshade
       kdePackages.dolphin
       kdePackages.qt6ct
@@ -92,7 +93,9 @@
       thunar
       usbutils
       wev
-      wf-recorder
+      (wf-recorder.override {
+        ffmpeg = ffmpeg_7;
+      })
       wl-clipboard
       wl-gammactl
       xev

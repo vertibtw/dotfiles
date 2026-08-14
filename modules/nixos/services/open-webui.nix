@@ -1,7 +1,7 @@
 { ... }:
 {
   services.open-webui = {
-    enable = false;
+    enable = true;
     port = 6767;
     environment = {
       WEBUI_AUTH = "False";
