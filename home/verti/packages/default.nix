@@ -99,7 +99,7 @@
       wl-clipboard
       wl-gammactl
       xev
-      })
+      )
       # keep-sorted end
     ];
 }
