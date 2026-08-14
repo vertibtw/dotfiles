@@ -61,6 +61,7 @@
       #keep-sorted start
       (wf-recorder.override {
         ffmpeg = ffmpeg_7;
+      }
       alsa-lib
       audacity
       blueman
