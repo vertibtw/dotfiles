@@ -95,6 +95,9 @@
       texstudio
       thunar
       usbutils
+      wayland
+      river
+      libxkbcommon
       wev
       wl-clipboard
       wl-gammactl
