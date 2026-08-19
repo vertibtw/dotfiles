@@ -78,6 +78,7 @@
       kdePackages.qt6ct
       libnotify
       libsForQt5.qt5ct
+      libxkbcommon
       mission-center
       nautilus
       networkmanagerapplet
@@ -88,6 +89,7 @@
       playerctl
       qt6.qtdeclarative
       qt6.qttools
+      river
       slurp
       spotify
       swaylock
@@ -95,8 +97,6 @@
       thunar
       usbutils
       wayland
-      river
-      libxkbcommon
       wev
       wl-clipboard
       wl-gammactl
