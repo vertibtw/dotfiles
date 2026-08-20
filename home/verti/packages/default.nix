@@ -98,6 +98,7 @@
       thunar
       usbutils
       wayland
+      wayland-scanner
       wev
       wl-clipboard
       wl-gammactl
