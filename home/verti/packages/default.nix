@@ -58,9 +58,10 @@
       # keep-sorted end
     ]
     ++ lib.optionals (profile == "desktop") [
-      (wf-recorder.override {
-        ffmpeg = ffmpeg_7;
-      })
+#      (wf-recorder.override {
+#        ffmpeg = ffmpeg_7;
+#      })
+      wf-recorder
       #keep-sorted start
       alsa-lib
       audacity
@@ -90,7 +91,6 @@
       playerctl
       qt6.qtdeclarative
       qt6.qttools
-      river
       slurp
       spotify
       swaylock

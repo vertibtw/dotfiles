@@ -1,4 +1,3 @@
-# emacs fucked up the indentation in this file, idk don't wanna fix it
 { pkgs, theme, ... }:
 {
   programs.neovim = {
@@ -94,6 +93,7 @@
 
        vim.lsp.config('lua_ls', {
          capabilities = capabilities,
+         settings = { Lua = { hint = { enable = true } } },
        })
 
        vim.lsp.config('nil_ls', {
@@ -101,6 +101,8 @@
        })
 
        vim.lsp.enable({ 'clangd', 'lua_ls', 'nil_ls' })
+
+       vim.lsp.inlay_hint.enable(true)
 
        vim.api.nvim_create_autocmd('LspAttach', {
          callback = function(args)
