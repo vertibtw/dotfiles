@@ -59,6 +59,7 @@
     ]
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
+      wf-recorder
       alsa-lib
       wf-recorder
       audacity
