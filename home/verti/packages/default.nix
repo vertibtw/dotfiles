@@ -58,12 +58,9 @@
       # keep-sorted end
     ]
     ++ lib.optionals (profile == "desktop") [
-#      (wf-recorder.override {
-#        ffmpeg = ffmpeg_7;
-#      })
-      wf-recorder
       #keep-sorted start
       alsa-lib
+      wf-recorder
       audacity
       blueman
       brave
