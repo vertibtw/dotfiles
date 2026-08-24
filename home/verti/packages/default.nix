@@ -59,9 +59,7 @@
     ]
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
-      wf-recorder
       alsa-lib
-      wf-recorder
       audacity
       blueman
       brave
@@ -98,6 +96,7 @@
       wayland
       wayland-scanner
       wev
+      wf-recorder
       wl-clipboard
       wl-gammactl
       xev
