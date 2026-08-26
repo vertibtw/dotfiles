@@ -632,11 +632,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1786652802,
-        "narHash": "sha256-HzuwGNn5HpsM38QuHsfCBoomZ49EZKIxMBEcGaE7nfs=",
+        "lastModified": 1787690003,
+        "narHash": "sha256-VOG+wZ1Ymhyzw96T2IpCJBlbgTlk7MXoo+Ap/sJyxiA=",
         "owner": "vertibtw",
         "repo": "vbar",
-        "rev": "7a984ed81eaf5ab783dad23364c95994edf8c260",
+        "rev": "8a3223bc0352dd3c18aa4c7f3f184a482f74cd5e",
         "type": "github"
       },
       "original": {

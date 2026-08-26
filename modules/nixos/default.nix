@@ -10,6 +10,7 @@
     ./security
     ./services
     ./settings.nix
+    ./virtualisation.nix
     # keep-sorted end
   ];
 }

@@ -9,6 +9,7 @@
       gp = "git push";
       gs = "git status";
       ff = "fastfetch";
+      yz = "yazi";
       snvim = "sudo nvim";
       "..." = "cd ../../";
       "...." = "cd ../../../";

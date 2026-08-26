@@ -30,6 +30,7 @@
           require("catppuccin").setup({ flavour = "mocha" })
         '';
       }
+      minimap-vim
       {
         plugin = lualine-nvim;
         type = "lua";

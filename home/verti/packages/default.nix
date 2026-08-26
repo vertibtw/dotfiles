@@ -99,6 +99,9 @@
       wf-recorder
       wl-clipboard
       wl-gammactl
+      qemu
+      libvirt
+      virt-manager
       xev
       # keep-sorted end
     ];
