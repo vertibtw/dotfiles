@@ -15,7 +15,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 6;        /* 2 is the default spacing around the bar's font */
+static const int user_bh            = 8;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]      = {"scientifica:size=12", "JetBrainsMono Nerd Font:size=10", "monospace:size=10"};
 static const char dmenufont[]       = "scientifica:size=12";
 

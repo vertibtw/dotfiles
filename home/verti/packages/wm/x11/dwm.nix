@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, theme, ... }:
 let
   patched_dwm = pkgs.dwm.overrideAttrs (old: {
     src = inputs.dwm;
@@ -16,16 +16,16 @@ let
             status="$(cat /sys/class/power_supply/BAT0/status)"
 
             case "$status" in
-                Charging)    state="c" ;;
-                Discharging) state="d" ;;
-                *)           state="n" ;;
+                Charging)    state="^c${theme.colors.green}^[c]^c${theme.colors.text1}^" ;;
+                Discharging) state="^c${theme.colors.blue}^[d]^c${theme.colors.text1}^" ;;
+                *)           state="[n]" ;;
             esac
 
             time="$(date '+%H:%M')"
 
-            xsetroot -name "[$state] $battery  | $time"
+            xsetroot -name "$state $battery  | $time"
 
-            sleep 5
+            sleep 1
         done
     }
 

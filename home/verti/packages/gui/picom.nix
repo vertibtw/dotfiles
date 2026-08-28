@@ -10,7 +10,7 @@
           {
             triggers = [ "open" ];
             preset = "slide-in";
-            direction = "up";
+            direction = "down";
             duration = 0.2;
           },
           {
