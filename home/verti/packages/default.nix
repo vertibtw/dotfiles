@@ -52,6 +52,7 @@
       tree
       tty-clock
       unzip
+      wget
       vim
       yq
       yt-dlp
@@ -66,6 +67,8 @@
       brightnessctl
       cliphist
       dconf
+      dmenu
+      feh
       grim
       gtk4-layer-shell
       gtkmm4
@@ -83,6 +86,7 @@
       nwg-look
       obs-studio
       osu-lazer-bin
+      picom
       pkgs.python3Packages.matplotlib
       playerctl
       qt6.qtdeclarative
@@ -103,6 +107,8 @@
       libvirt
       virt-manager
       xev
+      xrandr
+      xsetroot
       # keep-sorted end
     ];
 }

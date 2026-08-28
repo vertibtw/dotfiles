@@ -48,6 +48,23 @@
         "type": "github"
       }
     },
+    "dwm": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769768318,
+        "narHash": "sha256-mkMFmqV9NVGTdDGqW8f+T7r0YQNU1KDsn6uRcacoNco=",
+        "ref": "refs/heads/master",
+        "rev": "f63cde9354504ee9cfecc07517c03736d0f90c26",
+        "revCount": 1733,
+        "type": "git",
+        "url": "https://git.suckless.org/dwm"
+      },
+      "original": {
+        "rev": "f63cde9354504ee9cfecc07517c03736d0f90c26",
+        "type": "git",
+        "url": "https://git.suckless.org/dwm"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -581,6 +598,7 @@
     },
     "root": {
       "inputs": {
+        "dwm": "dwm",
         "home-manager": "home-manager",
         "hyprland-git": "hyprland-git",
         "kopuz-git": "kopuz-git",

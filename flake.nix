@@ -1,12 +1,11 @@
 {
-  description = "<3";
+  description = "have a nice day";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     hyprland-git = {
       url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs"; # to avoid stupid errors
     };
 
     qs-git = {
@@ -35,6 +34,11 @@
 
     vbar = {
       url = "github:vertibtw/vbar";
+    };
+
+    dwm = {
+      url = "git+https://git.suckless.org/dwm?rev=f63cde9354504ee9cfecc07517c03736d0f90c26";
+      flake = false;
     };
   };
 
