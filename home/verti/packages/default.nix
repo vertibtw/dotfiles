@@ -52,8 +52,8 @@
       tree
       tty-clock
       unzip
-      wget
       vim
+      wget
       yq
       yt-dlp
       # keep-sorted end
@@ -79,6 +79,7 @@
       kdePackages.qt6ct
       libnotify
       libsForQt5.qt5ct
+      libvirt
       libxkbcommon
       mission-center
       nautilus
@@ -89,6 +90,7 @@
       picom
       pkgs.python3Packages.matplotlib
       playerctl
+      qemu
       qt6.qtdeclarative
       qt6.qttools
       slurp
@@ -97,15 +99,13 @@
       texstudio
       thunar
       usbutils
+      virt-manager
       wayland
       wayland-scanner
       wev
       wf-recorder
       wl-clipboard
       wl-gammactl
-      qemu
-      libvirt
-      virt-manager
       xev
       xrandr
       xsetroot

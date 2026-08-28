@@ -3,14 +3,14 @@
   imports = [
     # keep-sorted start
     ./eza.nix
-    ./git.nix
-    ./ssh.nix
-    ./zsh.nix
-    ./fish.nix
-    ./neovim.nix
-    ./starship.nix
     ./fastfetch.nix
+    ./fish.nix
+    ./git.nix
+    ./neovim.nix
+    ./ssh.nix
+    ./starship.nix
     ./yazi.nix
+    ./zsh.nix
     #keep-sorted end
   ]
   ++ lib.optionals (profile == "desktop") [
