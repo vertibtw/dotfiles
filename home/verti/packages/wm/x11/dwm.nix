@@ -1,9 +1,14 @@
-{ pkgs, inputs, theme, ... }:
+{
+  pkgs,
+  inputs,
+  theme,
+  ...
+}:
 let
   patched_dwm = pkgs.dwm.overrideAttrs (old: {
     src = inputs.dwm;
     patches = [
-        ./dwm/patches.diff
+      ./dwm/patches.diff
     ];
     postPatch = "cp -f ${./dwm/config.def.h} config.def.h";
   });
@@ -45,17 +50,17 @@ let
   '';
 in
 {
-    home.packages = [
-        patched_dwm
-    ];
+  home.packages = [
+    patched_dwm
+  ];
 
-    # TODO: home-manager probably shouldn't manage this
-    home.file."/.local/bin/dwm.sh" = {
-        text = "${dwm_autostart}";
-        executable = true;
-    };
-    home.file."/.local/bin/dwm_randomwall.sh" = {
-        text = "${dwm_randomwall}";
-        executable = true;
-    };
+  # TODO: home-manager probably shouldn't manage this
+  home.file."/.local/bin/dwm.sh" = {
+    text = "${dwm_autostart}";
+    executable = true;
+  };
+  home.file."/.local/bin/dwm_randomwall.sh" = {
+    text = "${dwm_randomwall}";
+    executable = true;
+  };
 }

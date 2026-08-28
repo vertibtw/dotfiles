@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
-    imports = [ ./dwm.nix ];
+  imports = [ ./dwm.nix ];
 }

@@ -1,9 +1,9 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
-    virtualisation.libvirtd = {
-        enable = true;
-        qemu = {
-            package = pkgs.qemu_kvm;
-        };
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
     };
+  };
 }

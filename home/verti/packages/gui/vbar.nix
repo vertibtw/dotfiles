@@ -10,9 +10,12 @@
         margin-left = 300;
         margin-right = 300;
         margin-top = 10;
-        modules-left   = ["workspaces"];
-        modules-center = ["clock"];
-        modules-right = ["battery" "volume"];
+        modules-left = [ "workspaces" ];
+        modules-center = [ "clock" ];
+        modules-right = [
+          "battery"
+          "volume"
+        ];
         ws-indicator-type = "id";
       };
     };
