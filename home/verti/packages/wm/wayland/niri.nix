@@ -179,5 +179,5 @@
         Super+Shift+Q { quit; }
         Super+Shift+Escape { power-off-monitors; }
     }
-    '';
+  '';
 }
