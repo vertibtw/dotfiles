@@ -1,6 +1,6 @@
 { theme, ... }:
 {
-    xdg.configFile."/niri/config.kdl".text = ''
+    xdg.configFile."niri/config.kdl".text = ''
     input {
         keyboard {
             xkb {
@@ -31,8 +31,8 @@
         }
 
         default-column-width { proportion 0.5; }
-        prefer-no-csd
-        focus-ring {off}
+
+        focus-ring { off; }
 
         border {
             width 1
@@ -175,8 +175,6 @@
         Print { screenshot; }
         Ctrl+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
-
-        Super+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
         Super+Shift+Q { quit; }
         Super+Shift+Escape { power-off-monitors; }

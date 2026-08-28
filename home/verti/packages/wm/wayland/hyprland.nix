@@ -12,6 +12,7 @@ in
     inputs.hyprland-git.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
   ];
 
+  xdg.configFile."hypr/shaders".source = ./shaders;
   xdg.configFile."hypr/hyprland.lua".text = ''
     -- APPS
 
@@ -249,5 +250,4 @@ in
 
   '';
 
-  xdg.configFile."hypr/shaders".source = ./shaders;
 }
