@@ -1,6 +1,6 @@
 { theme, ... }:
 {
-    xdg.configFile."/niri/config.kdl".text = ''
+  xdg.configFile."/niri/config.kdl".text = ''
     input {
         keyboard {
             xkb {
@@ -181,5 +181,5 @@
         Super+Shift+Q { quit; }
         Super+Shift+Escape { power-off-monitors; }
     }
-    '';
+  '';
 }
