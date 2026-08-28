@@ -20,7 +20,7 @@ in
         filemgr     = "dolphin",
         menu        = "fuzzel",
         clipboardmgr= "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy",
-        screenshot  = 'grim -g "$(slurp)" - | magick convert - -resize 200% png:- | swappy -f -',
+        screenshot  = 'grim -g "$(slurp)" - | swappy -f -',
         lockscreen  = 'hyprlock'
     }
 
