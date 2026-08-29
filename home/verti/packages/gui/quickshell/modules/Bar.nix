@@ -36,7 +36,8 @@
                     top: parent.top
                     left: parent.left
                     right: parent.right
-                    topMargin: 25
+                    //topMargin: 25
+                    topMargin: 10
                 }
                 Loader {
                     active: true
