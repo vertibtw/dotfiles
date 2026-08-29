@@ -5,6 +5,7 @@
     ./displaymanager.nix
     ./docker.nix
     ./fwupd.nix
+    ./upower.nix
     ./ollama.nix
     ./open-webui.nix
     ./openssh.nix

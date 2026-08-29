@@ -13,9 +13,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    qs-conf = {
-      url = "github:vertibtw/quickshell";
-      flake = false;
+    qml-niri = {
+      url = "github:imiric/qml-niri/main";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {

@@ -168,7 +168,8 @@
         Super+Shift+8 { move-window-to-workspace 8; }
         Super+Shift+9 { move-window-to-workspace 9; }
 
-        Super+F { fullscreen-window; }
+        Super+F { maximize-column; }
+        Super+Shift+F { fullscreen-window; }
 
         Super+V       { toggle-window-floating; }
 
