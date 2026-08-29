@@ -46,6 +46,9 @@
                   (setq mouse-wheel-progressive-speed nil)
                   (setq mouse-wheel-follow-mouse t)
                   (setq scroll-preserve-screen-position t)
+                  (set-face-attribute 'default nil
+                    :family "JetBrainsMono Nerd Font"
+                    :height 140)
                   (use-package ultra-scroll
                    :ensure t
                    :init
