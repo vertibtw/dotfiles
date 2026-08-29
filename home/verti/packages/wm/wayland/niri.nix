@@ -1,6 +1,6 @@
 { theme, ... }:
 {
-    xdg.configFile."niri/config.kdl".text = ''
+  xdg.configFile."niri/config.kdl".text = ''
     input {
         keyboard {
             xkb {

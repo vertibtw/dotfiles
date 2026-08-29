@@ -7,8 +7,8 @@
     ])
   ];
 
-    imports = [
-        ./quickshell
-    ];
+  imports = [
+    ./quickshell
+  ];
 
 }
