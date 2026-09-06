@@ -7,5 +7,5 @@ let
   ];
 in
 {
-    environment.systemPackages = scripts;
+  environment.systemPackages = scripts;
 }
