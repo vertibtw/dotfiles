@@ -1,8 +1,8 @@
 {
   imports = [
     # keep-sorted start
-    ./boot
     ./bin
+    ./boot
     ./devices.nix
     ./fonts
     ./locale.nix
