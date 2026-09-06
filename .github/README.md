@@ -13,7 +13,7 @@ It follows the basic structure of:
 ├── home    - the config stuff
 ├── hosts   - per-host configs
 ├── lib     - helper function (s in the future maybe)
-└── modules - reusable modules
+└── modules - everything that is not home-manager basically
 ```
 
 glory to systemd
