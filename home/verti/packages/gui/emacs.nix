@@ -20,6 +20,7 @@
       epkgs.vertico
       epkgs.consult
       epkgs.orderless
+      epkgs.marginalia
       epkgs.neotree
       epkgs.ultra-scroll
       epkgs.dashboard
@@ -93,6 +94,9 @@
                   (use-package orderless
                          :config
                          (setq completion-styles '(orderless basic)))
+                  (use-package marginalia
+                         :config
+                         (marginalia-mode))
 
                   (use-package consult)
                   (use-package neotree
@@ -103,7 +107,7 @@
                   (with-eval-after-load 'evil
                     (evil-set-leader 'normal (kbd "SPC"))
                     (evil-define-key 'normal 'global
-                        (kbd "<leader>ff") 'consult-find
+                        (kbd "<leader>ff") 'find-file
                         (kbd "<leader>fg") 'consult-grep
                         (kbd "<leader>fs") 'save-buffer
                         (kbd "<leader>e")  'neotree-toggle
