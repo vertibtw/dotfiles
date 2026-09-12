@@ -14,6 +14,7 @@
     ./quickshell.nix
     ./swappy.nix
     ./vbar.nix
+    ./mpv.nix
     ./vesktop.nix
     ./vscode.nix
     ./zathura.nix
