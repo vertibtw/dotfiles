@@ -21,6 +21,7 @@
         "uptime"
         "kernel"
         "packages"
+        "disk"
         "shell"
         "wm"
         "separator"
