@@ -9,12 +9,12 @@
     ./gtk.nix
     ./hyprlock.nix
     ./kopuz.nix
+    ./mpv.nix
     ./picom.nix
     ./qt.nix
     ./quickshell.nix
     ./swappy.nix
     ./vbar.nix
-    ./mpv.nix
     ./vesktop.nix
     ./vscode.nix
     ./zathura.nix
