@@ -52,6 +52,8 @@ in
         hl.exec_cmd("dunst")
         hl.exec_cmd("vesktop -m --ozone-platform wayland --enable-blink-features=MiddleClickAutoscroll")
         hl.exec_cmd("vbar")
+
+        hl.exec_cmd("scripts.hyprland_ipc")
     end)
 
 
@@ -212,6 +214,8 @@ in
     hl.bind(mainMod .. "+ C", hl.dsp.exec_cmd(apps.clipboardmgr))
     hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('if pgrep -x "' .. apps.menu .. '" > /dev/null; then pkill -x ' .. apps.menu .. '; else ' .. apps.menu .. ' ' .. '; fi'))
     hl.bind(mainMod .. " + F7", hl.dsp.exec_cmd('find ~/Pictures/Wallpapers -type f | fuzzel --dmenu | xargs awww img')) -- temp
+
+    hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kill -USR1 $(pidof vbar)"))
 
     hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
     hl.bind(mainMod .. " + L",  hl.dsp.focus({ direction = "right" }))

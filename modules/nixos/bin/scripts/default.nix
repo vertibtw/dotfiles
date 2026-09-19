@@ -4,6 +4,7 @@ let
   scripts = [
     (pkgs.writeShellScriptBin "scripts.yuri" (import ./yuri.nix))
     (pkgs.writeShellScriptBin "scripts.dirgrep" (import ./dirgrep.nix))
+    (pkgs.writers.writePython3Bin "scripts.hyprland_ipc" {} (builtins.readFile ./hyprland_ipc.py))
   ];
 in
 {

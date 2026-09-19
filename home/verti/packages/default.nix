@@ -91,6 +91,7 @@
       pkgs.python3Packages.matplotlib
       playerctl
       qemu
+      libreoffice
       qt6.qtdeclarative
       qt6.qttools
       slurp
