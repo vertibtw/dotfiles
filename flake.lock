@@ -746,11 +746,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1787690003,
-        "narHash": "sha256-VOG+wZ1Ymhyzw96T2IpCJBlbgTlk7MXoo+Ap/sJyxiA=",
+        "lastModified": 1789813564,
+        "narHash": "sha256-qRBqbGtOv8VnvWv1BnnSgYejRhUESMs1WZfiPQZmEAE=",
         "owner": "vertibtw",
         "repo": "vbar",
-        "rev": "8a3223bc0352dd3c18aa4c7f3f184a482f74cd5e",
+        "rev": "543e678f8e62a826e1ff7783ae0b08df6c7db08b",
         "type": "github"
       },
       "original": {
