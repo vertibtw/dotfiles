@@ -10,7 +10,10 @@
         margin-left = 300;
         margin-right = 300;
         margin-top = 10;
-        modules-left = [ "workspaces" "layout" ];
+        modules-left = [
+          "workspaces"
+          "layout"
+        ];
         modules-center = [ "clock" ];
         modules-right = [
           "battery"
