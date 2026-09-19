@@ -19,7 +19,7 @@ in
     local apps = {
         terminal = "kitty",
         filemgr     = "dolphin",
-        menu        = "fuzzel",
+        menu        = "rofi",
         clipboardmgr= "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy",
         screenshot  = 'grim -g "$(slurp)" - | swappy -f -',
         lockscreen  = 'hyprlock'
@@ -212,8 +212,8 @@ in
     end)
 
     hl.bind(mainMod .. "+ C", hl.dsp.exec_cmd(apps.clipboardmgr))
-    hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('if pgrep -x "' .. apps.menu .. '" > /dev/null; then pkill -x ' .. apps.menu .. '; else ' .. apps.menu .. ' ' .. '; fi'))
-    hl.bind(mainMod .. " + F7", hl.dsp.exec_cmd('find ~/Pictures/Wallpapers -type f | fuzzel --dmenu | xargs awww img')) -- temp
+    hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('if pgrep -x "' .. apps.menu .. '" > /dev/null; then pkill -x ' .. apps.menu .. '; else ' .. apps.menu .. ' -show drun ' .. '; fi'))
+    hl.bind(mainMod .. " + F7", hl.dsp.exec_cmd("scripts.wselector"))
 
     hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kill -USR1 $(pidof vbar)"))
 

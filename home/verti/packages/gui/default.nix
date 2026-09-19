@@ -11,6 +11,7 @@
     ./kopuz.nix
     ./mpv.nix
     ./picom.nix
+    ./rofi.nix
     ./qt.nix
     ./quickshell.nix
     ./swappy.nix
