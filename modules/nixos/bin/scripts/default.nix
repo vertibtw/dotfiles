@@ -5,7 +5,7 @@ let
     (pkgs.writeShellScriptBin "scripts.yuri"      (import ./yuri.nix))
     (pkgs.writeShellScriptBin "scripts.dirgrep"   (import ./dirgrep.nix))
     (pkgs.writeShellScriptBin "scripts.wselector" (import ./wallpaper_selector.nix))
-    (pkgs.writers.writePython3Bin "scripts.hyprland_ipc" {} (builtins.readFile ./hyprland_ipc.py))
+    (pkgs.writers.writePython3Bin "scripts.hyprland_ipc" { } (builtins.readFile ./hyprland_ipc.py))
   ];
 in
 {
