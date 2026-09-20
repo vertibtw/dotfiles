@@ -1,21 +1,23 @@
 { config, theme, ... }:
 {
-programs.rofi = {
-  enable = true;
-  font = "JetBrainsMono Nerd Font 10";
+  programs.rofi = {
+    enable = true;
+    font = "JetBrainsMono Nerd Font 10";
 
-  extraConfig = {
-    modi = "drun,run,window";
-    show-icons = true;
-    display-drun = " ";
-    display-run = " ";
-    display-window = " ";
-    drun-display-format = "{name}";
-  };
+    extraConfig = {
+      modi = "drun,run,window";
+      show-icons = true;
+      display-drun = " ";
+      display-run = " ";
+      display-window = " ";
+      drun-display-format = "{name}";
+    };
 
-  theme = let
-    inherit (config.lib.formats.rasi) mkLiteral;
-      in {
+    theme =
+      let
+        inherit (config.lib.formats.rasi) mkLiteral;
+      in
+      {
         "*" = {
           bg = mkLiteral "${theme.colors.background}";
           bg-alt = mkLiteral "${theme.colors.background2}";
@@ -46,7 +48,10 @@ programs.rofi = {
           padding = mkLiteral "8px";
           background-color = mkLiteral "@bg-alt";
           border-radius = mkLiteral "0px";
-          children = [ (mkLiteral "prompt") (mkLiteral "entry") ];
+          children = [
+            (mkLiteral "prompt")
+            (mkLiteral "entry")
+          ];
         };
 
         "prompt" = {
@@ -101,5 +106,5 @@ programs.rofi = {
           background-color = mkLiteral "inherit";
         };
       };
-    };
+  };
 }
