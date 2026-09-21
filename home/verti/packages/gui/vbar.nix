@@ -16,6 +16,8 @@
         ];
         modules-center = [ "clock" ];
         modules-right = [
+          "cpicker"
+          "record"
           "battery"
           "volume"
         ];
