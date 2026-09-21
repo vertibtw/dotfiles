@@ -1,4 +1,4 @@
-dotfiles
+## dotfiles
 warcrimes against the nix community
 
 repo contains personal nixos config
