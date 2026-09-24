@@ -97,6 +97,7 @@
       slurp
       spotify
       swaylock
+      system-config-printer
       texstudio
       thunar
       usbutils

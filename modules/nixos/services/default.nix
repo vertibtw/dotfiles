@@ -1,6 +1,7 @@
 {
   imports = [
     #keep-sorted start
+    ./avahi.nix
     ./bluetooth.nix
     ./displaymanager.nix
     ./docker.nix
