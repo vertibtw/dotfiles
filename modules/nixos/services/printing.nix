@@ -3,7 +3,10 @@
     enable = true;
     browsing = true;
     defaultShared = false;
-    drivers = with pkgs; [ hplip cups-filters ];
+    drivers = with pkgs; [
+      hplip
+      cups-filters
+    ];
     extraConf = ''
       SystemGroup @wheel
     '';
