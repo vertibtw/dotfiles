@@ -28,6 +28,7 @@
       cmake
       curl
       curl.dev
+      delta
       fd
       ffmpeg
       fzf
