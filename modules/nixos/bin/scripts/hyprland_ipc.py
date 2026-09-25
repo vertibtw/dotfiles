@@ -11,6 +11,13 @@ bar_open = False
 s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 s.connect(socket_path)
 
+
+def send_notification(content):
+    subprocess.Popen(["dunstctl", "close-all"])
+    time.sleep(0.05)
+    subprocess.Popen(["notify-send", content])
+
+
 with s.makefile("r", encoding="utf-8") as f:
     for line in f:
         line = line.strip()
@@ -22,17 +29,10 @@ with s.makefile("r", encoding="utf-8") as f:
         if event == "openlayer" and args == "v.bar":
             bar_open = True
             subprocess.Popen(["dunstctl", "close-all"])
-            print("bar_open")
         elif event == "closelayer" and args == "v.bar":
             bar_open = False
-            print("bar_close")
         elif event == "workspacev2" and not bar_open:
             workspace_id, workspace_name = args.split(",", 1)
-
-            subprocess.Popen(["dunstctl", "close-all"])
-            time.sleep(0.05)
-            subprocess.Popen(
-                ["notify-send", f"ID: {workspace_id}"]
-            )
-
-            print(f"ws id: {workspace_id}, ws name: {workspace_name}")
+            send_notification(workspace_name)
+        elif event == "custom" and args == "clock" and not bar_open:
+            send_notification(f"{time.strftime('%H:%M', time.localtime())}")

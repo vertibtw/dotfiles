@@ -215,6 +215,9 @@ in
     hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd('if pgrep -x "' .. apps.menu .. '" > /dev/null; then pkill -x ' .. apps.menu .. '; else ' .. apps.menu .. ' -show drun ' .. '; fi'))
     hl.bind(mainMod .. " + F7", hl.dsp.exec_cmd("scripts.wselector"))
 
+
+    hl.bind(mainMod .. "+ P", hl.dsp.event("clock"))
+
     hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kill -USR1 $(pidof vbar)"))
 
     hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))

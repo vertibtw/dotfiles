@@ -9,6 +9,7 @@
         width = "(200,200)";
         height = "(100,150)";
         frame_width = 1;
+        alignment = "center";
         frame_color = theme.colors.text1;
       };
 
