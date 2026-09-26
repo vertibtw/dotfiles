@@ -6,7 +6,6 @@
     extraGroups = [
       "networkmanager"
       "wheel"
-      "docker"
       "libvirtd"
       "input"
     ];
