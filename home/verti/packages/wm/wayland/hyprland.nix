@@ -217,6 +217,7 @@ in
 
 
     hl.bind(mainMod .. "+ P", hl.dsp.event("clock"))
+    hl.bind(mainMod .. "+ B", hl.dsp.event("battery"))
 
     hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kill -USR1 $(pidof vbar)"))
 

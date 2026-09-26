@@ -36,3 +36,7 @@ with s.makefile("r", encoding="utf-8") as f:
             send_notification(workspace_name)
         elif event == "custom" and args == "clock" and not bar_open:
             send_notification(f"{time.strftime('%H:%M', time.localtime())}")
+        elif event == "custom" and args == "battery" and not bar_open:
+            with open("/sys/class/power_supply/BAT0/capacity") as f:
+                p = int(f.read().strip())
+                send_notification(f"{p}%")
