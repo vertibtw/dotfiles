@@ -104,6 +104,7 @@
       usbutils
       virt-manager
       wayland
+      lmms
       wayland-scanner
       wev
       wf-recorder
