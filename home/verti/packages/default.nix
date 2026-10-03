@@ -83,6 +83,7 @@
       libsForQt5.qt5ct
       libvirt
       libxkbcommon
+      lmms
       mission-center
       nautilus
       networkmanagerapplet
@@ -105,7 +106,6 @@
       usbutils
       virt-manager
       wayland
-      lmms
       wayland-scanner
       wev
       wf-recorder
