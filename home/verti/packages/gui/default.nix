@@ -8,7 +8,6 @@
     ./fuzzel.nix
     ./gtk.nix
     ./hyprlock.nix
-    ./kopuz.nix
     ./mpv.nix
     ./picom.nix
     ./qt.nix

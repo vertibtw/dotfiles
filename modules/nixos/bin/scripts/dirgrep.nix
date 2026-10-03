@@ -1,8 +1,6 @@
 ''
   #!/bin/sh
 
-  # Usage: ./find_string.sh "string" [directory]
-
   if [ -z "$1" ]; then
       echo "Usage: $0 \"string\" [directory]"
       exit 1

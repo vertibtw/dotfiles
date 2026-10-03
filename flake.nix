@@ -29,10 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    kopuz-git = {
-      url = "github:Kopuz-org/kopuz";
-    };
-
     vbar = {
       url = "github:vertibtw/vbar";
     };

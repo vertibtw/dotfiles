@@ -87,6 +87,7 @@
       nautilus
       networkmanagerapplet
       nwg-look
+      pkgs.kopuz
       obs-studio
       osu-lazer-bin
       picom
