@@ -88,10 +88,10 @@
       nautilus
       networkmanagerapplet
       nwg-look
-      pkgs.kopuz
       obs-studio
       osu-lazer-bin
       picom
+      pkgs.kopuz
       pkgs.python3Packages.matplotlib
       playerctl
       qemu
