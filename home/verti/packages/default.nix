@@ -73,7 +73,6 @@
       grim
       gtk4-layer-shell
       gtkmm4
-      simple-scan
       htop
       hyprpicker
       hyprshade
@@ -98,6 +97,7 @@
       qemu
       qt6.qtdeclarative
       qt6.qttools
+      simple-scan
       slurp
       spotify
       swaylock
