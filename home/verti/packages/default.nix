@@ -73,6 +73,7 @@
       grim
       gtk4-layer-shell
       gtkmm4
+      simple-scan
       htop
       hyprpicker
       hyprshade

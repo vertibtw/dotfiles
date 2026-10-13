@@ -6,6 +6,7 @@
       font_family = "Ubuntu Nerd Font";
       scrollback_lines = 100000;
       enable_audio_bell = false;
+      remember_window_size = false;
 
       window_padding_width = 0; # neovim fix sort of
 
