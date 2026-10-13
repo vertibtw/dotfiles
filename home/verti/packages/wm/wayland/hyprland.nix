@@ -18,7 +18,7 @@ in
 
     local apps = {
         terminal = "kitty",
-        filemgr     = "dolphin",
+        filemgr     = "thunar",
         menu        = "rofi",
         clipboardmgr= "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy",
         screenshot  = 'grim -g "$(slurp)" - | swappy -f -',
