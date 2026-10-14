@@ -1,4 +1,10 @@
-{ lib, pkgs, inputs, profile, ... }:
+{
+  lib,
+  pkgs,
+  inputs,
+  profile,
+  ...
+}:
 lib.mkIf (profile == "desktop") {
   virtualisation.waydroid = {
     enable = true;

@@ -1,10 +1,10 @@
-{lib, profile, ...}:
+{ lib, profile, ... }:
 lib.mkIf (profile == "desktop") {
   services.xserver = {
     enable = true;
     xkb = {
-        layout = "pl";
-        # variant = "";
+      layout = "pl";
+      # variant = "";
     };
   };
 }

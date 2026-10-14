@@ -1,4 +1,9 @@
-{ lib, pkgs, profile, ... }:
+{
+  lib,
+  pkgs,
+  profile,
+  ...
+}:
 lib.mkIf (profile == "desktop") {
   fonts.packages = with pkgs; [
     scientifica

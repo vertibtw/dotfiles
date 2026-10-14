@@ -1,4 +1,4 @@
-{lib, profile, ...}:
+{ lib, profile, ... }:
 lib.mkIf (profile == "desktop") {
   services.pipewire = {
     enable = true;

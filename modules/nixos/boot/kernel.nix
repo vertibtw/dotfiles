@@ -1,4 +1,9 @@
-{ lib, pkgs, profile, ... }:
+{
+  lib,
+  pkgs,
+  profile,
+  ...
+}:
 lib.mkIf (profile == "desktop") {
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
