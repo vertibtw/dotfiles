@@ -10,9 +10,9 @@
     ./hyprlock.nix
     ./mpv.nix
     ./picom.nix
+    ./prismlauncher.nix
     ./qt.nix
     ./quickshell.nix
-    ./prismlauncher.nix
     ./rofi.nix
     ./swappy.nix
     ./vbar.nix
