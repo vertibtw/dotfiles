@@ -2,9 +2,9 @@
 {
   programs.rofi = {
     enable = true;
-    font = "JetBrainsMono Nerd Font 10";
 
-    extraConfig = {
+    settings = {
+      font = "JetBrainsMono Nerd Font 10";
       modi = "drun,run,window";
       show-icons = true;
       display-drun = " ";

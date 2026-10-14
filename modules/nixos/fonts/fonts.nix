@@ -1,5 +1,5 @@
-{ pkgs, ... }:
-{
+{ lib, pkgs, profile, ... }:
+lib.mkIf (profile == "desktop") {
   fonts.packages = with pkgs; [
     scientifica
     nerd-fonts.jetbrains-mono

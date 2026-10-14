@@ -2,6 +2,7 @@
 {
   programs.yazi = {
     enable = true;
+    shellWrapperName = "yz";
     theme = {
       manager = {
         cwd = {

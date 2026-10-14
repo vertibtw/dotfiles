@@ -1,5 +1,5 @@
-{ pkgs, ... }:
-{
+{ lib, profile, ... }:
+lib.mkIf (profile == "desktop") {
   fonts.fontconfig = {
     enable = true;
 

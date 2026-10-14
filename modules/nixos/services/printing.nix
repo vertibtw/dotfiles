@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ lib, pkgs, profile, ... }:
+lib.mkIf (profile == "desktop") {
   services.printing = {
     enable = true;
     browsing = true;

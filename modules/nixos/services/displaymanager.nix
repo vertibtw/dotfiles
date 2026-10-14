@@ -1,5 +1,5 @@
-{ pkgs, inputs, ... }:
-{
+{ lib, pkgs, inputs, profile, ... }:
+lib.mkIf (profile == "desktop") {
   services.displayManager = {
     gdm = {
       enable = true;

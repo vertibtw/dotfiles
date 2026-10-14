@@ -1,5 +1,5 @@
-{ pkgs, ... }:
-{
+{ lib, profile, pkgs, ... }:
+lib.mkIf (profile == "desktop") {
   virtualisation.libvirtd = {
     enable = true;
     qemu = {

@@ -1,5 +1,5 @@
-{ pkgs, inputs, ... }:
-{
+{ lib, pkgs, inputs, profile, ... }:
+lib.mkIf (profile == "desktop") {
   virtualisation.waydroid = {
     enable = true;
   };
@@ -17,6 +17,6 @@
     android-tools
     pkgs.iptables
     pkgs.dnsmasq
-    inputs.nur.legacyPackages.${pkgs.system}.repos.ataraxiasjel.waydroid-script
+    inputs.nur.legacyPackages.${pkgs.stdenv.hostPlatform.system}.repos.ataraxiasjel.waydroid-script
   ];
 }

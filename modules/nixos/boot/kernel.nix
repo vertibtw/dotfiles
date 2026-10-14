@@ -1,5 +1,5 @@
-{ pkgs, ... }:
-{
+{ lib, pkgs, profile, ... }:
+lib.mkIf (profile == "desktop") {
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
   boot.kernelParams = [

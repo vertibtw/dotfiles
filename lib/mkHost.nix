@@ -11,9 +11,11 @@
 }:
 nixpkgs.lib.nixosSystem {
   inherit system;
-  specialArgs = { inherit inputs; };
+  specialArgs = {
+    inherit inputs;
+    profile = extraArgs.profile or "wsl";
+  };
   modules = [
-    # cuz paths are relative to this file
     ../hosts/${hostname}
     ../modules/nixos
     ../modules/home

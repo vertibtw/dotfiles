@@ -13,7 +13,6 @@
     ./printing.nix
     ./upower.nix
     ./x11.nix
-    ./xkb.nix
     #keep-sorted end
   ];
 }
