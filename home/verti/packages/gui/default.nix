@@ -12,6 +12,7 @@
     ./picom.nix
     ./qt.nix
     ./quickshell.nix
+    ./prismlauncher.nix
     ./rofi.nix
     ./swappy.nix
     ./vbar.nix
