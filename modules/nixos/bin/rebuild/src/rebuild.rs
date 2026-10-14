@@ -75,11 +75,11 @@ fn main() {
                     m_index = random_message();
                 }
                 let mut status_line = format!(
-                    "{} {} ({})",
+                    "[\x1b[32m {} \x1b[0m] {} ({})",
                     spinner_frames[i % 4], messages[m_index], last_log_line
                 );
                 if status_line.chars().count() > 100 {
-                    status_line = format!("{}...", status_line.chars().take(97).collect::<String>());
+                    status_line = format!("{}...)", status_line.chars().take(97).collect::<String>());
                 }
                 print!("\r\x1b[2K{status_line}");
                 std::io::stdout().flush().ok();
