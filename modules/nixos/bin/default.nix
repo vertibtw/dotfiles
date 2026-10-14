@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./scripts ./rebuild ];
+  imports = [
+    ./scripts
+    ./rebuild
+  ];
 }
