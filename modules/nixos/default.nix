@@ -3,15 +3,15 @@
   imports = [
     # keep-sorted start
     ./bin
+    ./boot
+    ./devices.nix
+    ./fonts
     ./locale.nix
     ./networking.nix
     ./programs
     ./security
     ./services
     ./settings.nix
-    ./boot
-    ./devices.nix
-    ./fonts
     ./virtualisation.nix
     # keep-sorted end
   ];
