@@ -62,43 +62,7 @@ in
     end
 
     -- MONITORS
-    -- I tried to sort of turn of eDP-1 if another monitor is active, it sort of works sometimes
-
-    hl.on("monitor.added", function(mon)
-      if mon.name == "eDP-1" then
-        hl.monitor({
-          output   = "eDP-1",
-          mode     = "preferred",
-          position = "0x0",
-          scale    = "1",
-        })
-      else
-        hl.monitor({
-          output   = "eDP-1",
-          mode     = "preferred",
-          position = "0x0",
-          scale    = "1",
-          disabled = true,
-        })
-        hl.monitor({
-          output   = mon.name,
-          mode     = "preferred",
-          position = "0x0",
-          scale    = 1,
-        })
-      end
-    end)
-
-    hl.on("monitor.removed", function(mon)
-      if mon.name ~= "eDP-1" then
-        hl.monitor({
-          output   = "eDP-1",
-          mode     = "preferred",
-          position = "0x0",
-          scale    = "1",
-        })
-      end
-    end)
+    require("monitors")
 
     -- ANIMATIONS
 

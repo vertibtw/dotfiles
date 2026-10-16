@@ -61,6 +61,7 @@
     ]
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
+      nwg-displays
       alsa-lib
       audacity
       blueman
