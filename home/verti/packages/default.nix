@@ -61,7 +61,6 @@
     ]
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
-      nwg-displays
       alsa-lib
       audacity
       blueman
@@ -88,6 +87,7 @@
       mission-center
       nautilus
       networkmanagerapplet
+      nwg-displays
       nwg-look
       obs-studio
       osu-lazer-bin
