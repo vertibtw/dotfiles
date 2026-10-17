@@ -11,18 +11,56 @@ use std::{
 };
 
 const LOG: &str = "/tmp/last_nix_rebuild.log";
+const STATUS_WIDTH: usize = 100;
+
+fn get_log_line(log_offset: &mut u64) -> Option<String> {
+    let mut log_file = File::open(LOG).ok()?;
+    let log_len = log_file.metadata().map(|md| md.len()).unwrap_or(0);
+    if log_len < *log_offset {
+        *log_offset = 0;
+    }
+    log_file.seek(SeekFrom::Start(*log_offset)).ok()?;
+
+    let mut buf = Vec::new();
+    log_file.read_to_end(&mut buf).ok()?;
+    *log_offset = log_len;
+
+    String::from_utf8_lossy(&buf)
+        .lines()
+        .rev()
+        .find(|line| !line.trim().is_empty())
+        .map(|line| line.trim_end().to_owned())
+}
+
+fn status_line(spinner: &str, message: &str, log_line: &str) -> String {
+    let fixed_len = format!("[ {spinner} ] {message} (").chars().count() + 1;
+    let budget = STATUS_WIDTH.saturating_sub(fixed_len + "...".len());
+
+    let shown = if log_line.chars().count() > budget {
+        format!("{}...", log_line.chars().take(budget).collect::<String>())
+    } else {
+        log_line.to_owned()
+    };
+    format!("[\x1b[32m {spinner} \x1b[0m] {message} ({shown})")
+}
 
 fn main() {
-    let log = File::create(LOG).expect("failed to create log file");
+    let log_file = File::create(LOG).expect("failed to create log file");
 
-    let err_log = log.try_clone().expect("failed to clone log file");
+    let err_log = log_file.try_clone().expect("failed to clone log file");
 
-    let mut child = Command::new("nixos-rebuild")
+    let mut child = match Command::new("nixos-rebuild")
         .args(std::env::args_os().skip(1))
-        .stdout(Stdio::from(log))
+        .stdout(Stdio::from(log_file))
         .stderr(Stdio::from(err_log))
         .spawn()
-        .expect("failed to run nixos-rebuild");
+    {
+        Ok(child) => child,
+        Err(e) => {
+            eprintln!("failed to run nixos-rebuild: {e}");
+            std::process::exit(127);
+        }
+    };
 
     let spinner_frames = ["|", "/", "-", "\\"];
     let messages = [
@@ -52,47 +90,34 @@ fn main() {
             .unwrap_or(0)
     };
     let mut m_index = random_message();
-    let mut i = 0;
+    let mut tick: usize = 0;
     let mut log_offset: u64 = 0;
     let mut last_log_line = String::from("starting...");
+
     let status = loop {
-        match child.try_wait().expect("failed to wait on nixos-rebuild") {
-            Some(status) => break status,
-            None => {
-                if let Ok(mut log_file) = File::open(LOG) {
-                    let log_len = log_file.metadata().map(|md| md.len()).unwrap_or(0);
-                    if log_len < log_offset {
-                        log_offset = 0;
-                    }
-                    if log_file.seek(SeekFrom::Start(log_offset)).is_ok() {
-                        let mut buf = Vec::new();
-                        if log_file.read_to_end(&mut buf).is_ok() {
-                            for log_line in String::from_utf8_lossy(&buf).lines() {
-                                if !log_line.trim().is_empty() {
-                                    last_log_line.clear();
-                                    last_log_line.push_str(log_line.trim_end());
-                                }
-                            }
-                            log_offset = log_len;
-                        }
-                    }
-                }
-                if i % 50 == 49 {
-                    m_index = random_message();
-                }
-                let mut status_line = format!(
-                    "[\x1b[32m {} \x1b[0m] {} ({})",
-                    spinner_frames[i % 4], messages[m_index], last_log_line
-                );
-                if status_line.chars().count() > 100 {
-                    status_line = format!("{}...)", status_line.chars().take(97).collect::<String>());
-                }
-                print!("\r\x1b[2K{status_line}");
-                std::io::stdout().flush().ok();
-                thread::sleep(Duration::from_millis(200));
-                i += 1;
-            }
+        if let Some(status) = child.try_wait().expect("failed to wait on nixos-rebuild") {
+            break status;
         }
+
+        if let Some(line) = get_log_line(&mut log_offset) {
+            last_log_line = line;
+        }
+
+        if tick % 50 == 49 {
+            m_index = random_message();
+        }
+
+        print!(
+            "\r\x1b[2K{}",
+            status_line(
+                spinner_frames[tick % spinner_frames.len()],
+                messages[m_index],
+                &last_log_line,
+            )
+        );
+        std::io::stdout().flush().ok();
+        thread::sleep(Duration::from_millis(200));
+        tick += 1;
     };
     print!("\r\x1b[2K");
     std::io::stdout().flush().ok();
@@ -101,11 +126,14 @@ fn main() {
         println!("\x1b[32m󰄬\x1b[0m system rebuilt successfully!");
         println!("logs at {LOG}");
     } else {
-        eprintln!("\x1b[31m󰅖\x1b[0m system rebuild failed. Log:");
-
         let log =
             std::fs::read_to_string(LOG).unwrap_or_else(|_| "could not read log file".into());
 
+        let reason = match status.code() {
+            Some(code) => format!("exit code {code}"),
+            None => "killed by signal".to_owned(),
+        };
+        eprintln!("\x1b[31m󰅖\x1b[0m system rebuild failed ({reason}). Log at {LOG}:");
         eprintln!("{log}");
         std::process::exit(status.code().unwrap_or(1));
     }
