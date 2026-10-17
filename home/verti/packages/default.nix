@@ -101,6 +101,7 @@
       simple-scan
       slurp
       spotify
+      spotify-qt
       swaylock
       system-config-printer
       texstudio
