@@ -5,7 +5,6 @@
     ./bin
     ./boot
     ./devices.nix
-    ./users
     ./fonts
     ./locale.nix
     ./networking.nix
@@ -13,6 +12,7 @@
     ./security
     ./services
     ./settings.nix
+    ./users
     ./virtualisation.nix
     # keep-sorted end
   ];

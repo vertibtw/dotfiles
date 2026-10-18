@@ -1,10 +1,10 @@
 {
     imports = [
         # keep-sorted start
+        ./fastfetch.nix
         ./fish.nix
         ./neovim.nix
         ./starship.nix
-        ./fastfetch.nix
         # keep-sorted end
     ];
 }
