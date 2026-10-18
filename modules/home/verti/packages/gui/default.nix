@@ -2,6 +2,7 @@
   imports = [
     #keep-sorted start
     ./awww.nix
+    ./discord.nix
     ./dunst.nix
     ./emacs.nix
     ./flameshot.nix
@@ -19,7 +20,6 @@
     ./vesktop.nix
     ./vscode.nix
     ./zathura.nix
-    ./discord.nix
     #keep-sorted end
   ];
 }
