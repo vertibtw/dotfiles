@@ -19,6 +19,7 @@
     ./vesktop.nix
     ./vscode.nix
     ./zathura.nix
+    ./discord.nix
     #keep-sorted end
   ];
 }
