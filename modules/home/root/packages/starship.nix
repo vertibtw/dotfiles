@@ -5,7 +5,7 @@
     settings = {
       add_newline = false;
       format = ''
-        ''${custom}$hostname$directory$git_branch$git_status$character
+        ROOT $directory$git_branch$git_status$character
       '';
       directory = {
         truncation_length = 0;

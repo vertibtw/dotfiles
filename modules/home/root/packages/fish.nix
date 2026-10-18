@@ -1,0 +1,1 @@
+../../verti/packages/tui/fish.nix

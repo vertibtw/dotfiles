@@ -5,6 +5,7 @@
     ./bin
     ./boot
     ./devices.nix
+    ./users
     ./fonts
     ./locale.nix
     ./networking.nix

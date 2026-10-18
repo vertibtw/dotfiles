@@ -18,7 +18,6 @@ nixpkgs.lib.nixosSystem {
   modules = [
     ../hosts/${hostname}
     ../modules/nixos
-    ../modules/home
     home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
@@ -28,7 +27,8 @@ nixpkgs.lib.nixosSystem {
         theme = import ../modules/themes;
       }
       // extraArgs;
-      home-manager.users.verti = ../home/verti;
+      home-manager.users.verti = ../modules/home/verti;
+      home-manager.users.root = ../modules/home/root;
     }
   ];
 }
