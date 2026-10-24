@@ -2,12 +2,12 @@
   imports = [
     # keep-sorted start
     ./fish.nix
+    ./hyprland.nix
     ./kopuz.nix
     ./niri.nix
-    ./hyprland.nix
+    ./steam.nix
     ./waydroid.nix
     ./zsh.nix
-    ./steam.nix
     # keep-sorted end
   ];
 }

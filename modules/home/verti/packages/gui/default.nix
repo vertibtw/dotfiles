@@ -10,6 +10,7 @@
     ./gtk.nix
     ./hyprlock.nix
     ./mpv.nix
+    ./obsidian.nix
     ./picom.nix
     ./prismlauncher.nix
     ./qt.nix
@@ -20,8 +21,6 @@
     ./vesktop.nix
     ./vscode.nix
     ./zathura.nix
-    ./discord.nix
-    ./obsidian.nix
     #keep-sorted end
   ];
 }
