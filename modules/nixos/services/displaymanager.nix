@@ -1,19 +1,11 @@
 {
   lib,
-  pkgs,
-  inputs,
   profile,
   ...
 }:
 lib.mkIf (profile == "desktop") {
-  services.displayManager = {
-    gdm = {
-      enable = true;
-    };
-    sessionPackages = [
-      inputs.hyprland-git.packages.${pkgs.stdenv.hostPlatform.system}.hyprland # for the .desktop file
-    ];
-  };
+  services.displayManager.gdm.enable = true;
+
   environment.etc."X11/sessions/dwm.desktop".text = ''
     [Desktop Entry]
     Name=DWM

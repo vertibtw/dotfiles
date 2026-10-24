@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   theme,
   ...
 }:
@@ -9,7 +8,7 @@ let
 in
 {
   home.packages = [
-    inputs.hyprland-git.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+    pkgs.hyprland
   ];
 
   xdg.configFile."hypr/shaders".source = ./shaders;
@@ -79,6 +78,11 @@ in
     hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "linear" })
 
     hl.config({
+      xwayland = {
+        enabled = true,
+        force_zero_scaling = true
+      },
+
       animations = {
         enabled = true,
       },

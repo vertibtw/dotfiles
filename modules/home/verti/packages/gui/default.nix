@@ -20,6 +20,7 @@
     ./vscode.nix
     ./zathura.nix
     ./discord.nix
+    ./obsidian.nix
     #keep-sorted end
   ];
 }

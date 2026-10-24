@@ -11,7 +11,6 @@ in
     programs.nixcord = {
         enable = true;
         useGlobalPkgs = false; # otherwise node breaks sometimes
-        noMiddleClickPaste.enable = true;
 
         discord.enable = false;
         goofcord = {
