@@ -2,6 +2,7 @@
   imports = [
     #keep-sorted start
     ./awww.nix
+    ./discord.nix
     ./dunst.nix
     ./emacs.nix
     ./flameshot.nix
