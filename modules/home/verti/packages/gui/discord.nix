@@ -46,6 +46,7 @@ in
                     enable = true;
                     useDevIcon = "COLOR";
                 };
+                collapsibleUi.enable = true;
                 reverseImageSearch.enable = true;
                 declutter.enable = true;
                 betterGifAltText.enable = true;
