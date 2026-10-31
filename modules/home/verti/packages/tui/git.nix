@@ -1,11 +1,18 @@
-{ pkgs, theme, ... }: {
+{ config, theme, ... }: {
+  sops.secrets.email = { };
+
+  sops.templates."git-email".content = ''
+    [user]
+      email = ${config.sops.placeholder.email}
+  '';
+
   programs.git = {
     enable = true;
+    includes = [
+        { path = config.sops.templates."git-email".path; }
+    ];
     settings = {
-      user = {
-        name = "vertibtw";
-        email = "btwverti@gmail.com";
-      };
+      user.name = "vertibtw";
 
       core = {
         pager = "delta";

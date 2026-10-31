@@ -18,10 +18,14 @@ nixpkgs.lib.nixosSystem {
   modules = [
     ../hosts/${hostname}
     ../modules/nixos
+    inputs.sops-nix.nixosModules.sops
     home-manager.nixosModules.home-manager
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
+      home-manager.sharedModules = [
+        inputs.sops-nix.homeManagerModules.sops
+      ];
       home-manager.extraSpecialArgs = {
         inherit inputs;
         theme = import ../modules/themes;
