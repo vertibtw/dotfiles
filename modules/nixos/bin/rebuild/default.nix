@@ -2,8 +2,7 @@
 {
   environment.systemPackages = [
     (pkgs.stdenv.mkDerivation {
-      pname = "rebuild";
-      version = "0.1.0";
+      name = "rebuild";
       src = ./src/rebuild.rs;
       dontUnpack = true;
       nativeBuildInputs = [ pkgs.rustc ];
