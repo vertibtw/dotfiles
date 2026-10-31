@@ -7,7 +7,6 @@
     ./docker.nix
     ./fwupd.nix
     ./ollama.nix
-    ./open-webui.nix
     ./openssh.nix
     ./pipewire.nix
     ./printing.nix

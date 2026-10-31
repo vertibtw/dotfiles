@@ -14,6 +14,8 @@ lib.mkIf (profile == "desktop") {
   ];
 
   boot.kernelModules = [
+    # camera stuff idk
+    "v4l2loopback"
     # for waydroid
     "ashmem_linux"
     "binder_linux"
