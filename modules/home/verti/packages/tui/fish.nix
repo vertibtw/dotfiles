@@ -8,7 +8,7 @@
       g = "git";
       gc = "git commit -m";
       gp = "git push";
-      gpf= "git push --force";
+      gpf = "git push --force";
       gs = "git status";
       ff = "fastfetch";
       yz = "yazi";
