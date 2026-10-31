@@ -1,0 +1,11 @@
+*.json linguist-detectable=true
+flake.lock linguist-generated=true
+
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
