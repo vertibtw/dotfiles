@@ -55,6 +55,7 @@
       unzip
       vim
       wget
+      sops
       yq
       yt-dlp
       # keep-sorted end
