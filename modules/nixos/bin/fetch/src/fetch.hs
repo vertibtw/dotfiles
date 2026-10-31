@@ -32,14 +32,15 @@ tux = [ "    .--.",
 
 main :: IO ()
 main = do
-  user <- sh "whoami"
-  host <- sh "cat /proc/sys/kernel/hostname"
-  os   <- sh ". /etc/os-release; echo $ID"
-  name <- sh ". /etc/os-release; echo $PRETTY_NAME"
-  mem  <- sh "awk '/MemTotal/{t=$2} /MemAvailable/{a=$2} END{printf \"%dM / %dM\", (t-a)/1024, t/1024}' /proc/meminfo"
-  pkgs <- sh "if [ -e /run/current-system/sw ]; then nix-store -q --requisites /run/current-system/sw | wc -l; elif command -v pacman >/dev/null; then pacman -Qq | wc -l; else dpkg-query -f '.\\n' -W 2>/dev/null | wc -l; fi"
-  disk <- sh "df -h / | awk 'NR==2{print $3 \" / \" $2}'"
-  de   <- sh "echo ${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION:-unknown}}"
+  user   <- sh "whoami"
+  host   <- sh "cat /proc/sys/kernel/hostname"
+  kernel <- sh "uname -r"
+  os     <- sh ". /etc/os-release; echo $ID"
+  name   <- sh ". /etc/os-release; echo $PRETTY_NAME"
+  mem    <- sh "awk '/MemTotal/{t=$2} /MemAvailable/{a=$2} END{printf \"%dM / %dM\", (t-a)/1024, t/1024}' /proc/meminfo"
+  pkgs   <- sh "if [ -e /run/current-system/sw ]; then nix-store -q --requisites /run/current-system/sw | wc -l; elif command -v pacman >/dev/null; then pacman -Qq | wc -l; else dpkg-query -f '.\\n' -W 2>/dev/null | wc -l; fi"
+  disk  <- sh "df -h / | awk 'NR==2{print $3 \" / \" $2}'"
+  de    <- sh "echo ${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION:-unknown}}"
   let nix  = os == "nixos"
       logo = if nix then nixLogo else tux
       col  = if nix then 34 else 33
@@ -47,8 +48,11 @@ main = do
       info = [ c 36 (user ++ c 37 "@" ++ c 36 host)
              , c 36 (replicate (length user + length host + 1) '-')
              , row "OS" name
+             , row "Kernel" kernel
              , row "Memory" mem
              , row "Packages" pkgs
              , row "Disk" disk
              , row "WM/DE" de ]
-  putStr (unlines (zipWith (\l i -> c col (pad l) ++ i) logo info))
+  let n    = max (length logo) (length info)
+      fill = take n . (++ repeat "")
+  putStr (unlines (zipWith (\l i -> c col (pad l) ++ i) (fill logo) (fill info)))
