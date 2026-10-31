@@ -9,10 +9,10 @@
     enable = true;
     enableDefaultConfig = false;
     matchBlocks."github.com" = {
-        hostname = "github.com";
-        user = "git";
-        identityFile = config.sops.secrets."reimu/ssh-pv".path; # TODO: make it work for marisa
-        identitiesOnly = true;
+      hostname = "github.com";
+      user = "git";
+      identityFile = config.sops.secrets."reimu/ssh-pv".path; # TODO: make it work for marisa
+      identitiesOnly = true;
     };
     matchBlocks."*" = {
       addKeysToAgent = "yes";
