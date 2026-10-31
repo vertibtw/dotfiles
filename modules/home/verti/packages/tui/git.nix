@@ -9,7 +9,7 @@
   programs.git = {
     enable = true;
     includes = [
-        { path = config.sops.templates."git-email".path; }
+      { path = config.sops.templates."git-email".path; }
     ];
     settings = {
       user.name = "vertibtw";

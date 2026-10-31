@@ -1,9 +1,9 @@
-{...}:
+{ ... }:
 {
-    programs.obsidian = {
-        enable = true;
-        defaultSettings = {
-            themes.catppuccin.enable = true;
-        };
+  programs.obsidian = {
+    enable = true;
+    defaultSettings = {
+      themes.catppuccin.enable = true;
     };
+  };
 }
