@@ -2,9 +2,9 @@
 {
   imports = [
     #keep-sorted start
-    ./scripts
-    ./rebuild
     ./fetch
+    ./rebuild
+    ./scripts
     # keep-sorted end
   ];
 }

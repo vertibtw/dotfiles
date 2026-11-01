@@ -10,8 +10,8 @@
     ./openssh.nix
     ./pipewire.nix
     ./printing.nix
-    ./upower.nix
     ./sni-watcher.nix
+    ./upower.nix
     ./x11.nix
     #keep-sorted end
   ];

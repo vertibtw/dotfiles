@@ -50,12 +50,12 @@
       python3
       ripgrep
       rustc
+      sops
       tree
       tty-clock
       unzip
       vim
       wget
-      sops
       yq
       yt-dlp
       # keep-sorted end

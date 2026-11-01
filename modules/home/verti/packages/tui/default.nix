@@ -7,9 +7,9 @@
     ./fish.nix
     ./git.nix
     ./neovim.nix
+    ./sops.nix
     ./ssh.nix
     ./starship.nix
-    ./sops.nix
     ./yazi.nix
     ./zsh.nix
     #keep-sorted end
