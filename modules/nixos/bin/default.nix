@@ -5,6 +5,6 @@
     ./scripts
     ./rebuild
     ./fetch
-    # keep sorted end
+    # keep-sorted end
   ];
 }
