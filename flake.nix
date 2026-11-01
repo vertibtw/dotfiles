@@ -42,6 +42,11 @@
     nixcord = {
       url = "github:4evy/nixcord";
     };
+
+    sni-watcher = {
+      url = "github:NBonaparte/gdbus-sni-watcher";
+      flake = false;
+    };
   };
 
   outputs =

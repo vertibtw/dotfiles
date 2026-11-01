@@ -392,8 +392,25 @@
         "nur": "nur",
         "qml-niri": "qml-niri",
         "qs-git": "qs-git",
+        "sni-watcher": "sni-watcher",
         "sops-nix": "sops-nix",
         "vbar": "vbar"
+      }
+    },
+    "sni-watcher": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1548353768,
+        "narHash": "sha256-GeeHS4nmuwrlPvv499xwAm+9rt1K3QALRsSczNHjukg=",
+        "owner": "NBonaparte",
+        "repo": "gdbus-sni-watcher",
+        "rev": "a05c35d7d3d4af1dce71475bbe8ffc6ca38feb0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NBonaparte",
+        "repo": "gdbus-sni-watcher",
+        "type": "github"
       }
     },
     "sops-nix": {

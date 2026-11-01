@@ -1,25 +1,25 @@
 { inputs, ... }:
 {
   imports = [ inputs.vbar.homeManagerModules.default ];
+
   programs.vbar = {
     enable = true;
     settings = {
       theme = "catppuccin mocha";
       bar = {
-        thickness = 20;
-        margin-left = 300;
-        margin-right = 300;
-        margin-top = 10;
+        thickness = 10;
         modules-left = [
           "workspaces"
           "layout"
         ];
-        modules-center = [ "clock" ];
+        modules-center = [ "media" ];
         modules-right = [
           "cpicker"
           "record"
           "battery"
           "volume"
+          "systray"
+          "clock"
         ];
         ws-indicator-type = "id";
       };
