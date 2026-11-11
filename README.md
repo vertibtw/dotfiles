@@ -1,5 +1,5 @@
 ## verti's dotfiles
-(warcrimes against the nix community)
+(impure acts against the nix store)
 
 GLORY TO SYSTEMD
 
