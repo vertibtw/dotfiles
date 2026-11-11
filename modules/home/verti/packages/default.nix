@@ -65,7 +65,7 @@
       alsa-lib
       audacity
       blueman
-      brave
+      #brave
       brightnessctl
       cliphist
       dconf
@@ -93,7 +93,7 @@
       obs-studio
       osu-lazer-bin
       picom
-      pkgs.kopuz
+#      pkgs.kopuz temp removed cuz dep was broken
       pkgs.python3Packages.matplotlib
       playerctl
       qemu
@@ -101,7 +101,7 @@
       qt6.qttools
       simple-scan
       slurp
-      spotify
+      # spotify # deps broken
       spotify-qt
       swaylock
       system-config-printer

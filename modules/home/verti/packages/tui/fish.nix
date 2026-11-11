@@ -3,7 +3,6 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      nr = "sudo rebuild switch --flake /home/verti/dotfiles/#reimu";
       ls = "eza";
       g = "git";
       gc = "git commit -m";
@@ -21,6 +20,13 @@
     shellInit = ''
       set -g fish_greeting
     '';
+
+    functions = {
+      nr = ''
+        helium-upd /home/verti/dotfiles
+        sudo rebuild switch --flake /home/verti/dotfiles/#reimu $argv
+      '';
+    };
   };
 
 }
