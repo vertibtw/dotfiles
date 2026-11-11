@@ -93,7 +93,7 @@
       obs-studio
       osu-lazer-bin
       picom
-#      pkgs.kopuz temp removed cuz dep was broken
+      #      pkgs.kopuz temp removed cuz dep was broken
       pkgs.python3Packages.matplotlib
       playerctl
       qemu
