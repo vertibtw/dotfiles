@@ -10,5 +10,5 @@ repo contains personal nixos config, something will probably break if u try to u
 
 ---
 
-> [!WARNING]
+> [!CAUTION]
 > ![coolgifofananimegirl](.github/assets/gif.gif)
