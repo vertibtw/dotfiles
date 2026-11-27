@@ -8,10 +8,10 @@
       theme = "catppuccin mocha";
       bar = {
         position = "bottom";
-#        margin-left = 100;
-#        margin-right = 100;
-#        margin-top = 10;
-#        rounding = 10;
+        #        margin-left = 100;
+        #        margin-right = 100;
+        #        margin-top = 10;
+        #        rounding = 10;
 
         thickness = 10;
         modules-left = [
