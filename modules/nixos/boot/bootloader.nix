@@ -2,8 +2,10 @@
 lib.mkIf (profile == "desktop") {
   boot.loader.systemd-boot = {
     enable = true;
-    configurationLimit = 5; # so this fuckass error doesn't happen again.
+    configurationLimit = 2; # so this fuckass error doesn't happen again.
   };
+  boot.initrd.compressor = "zstd";
+  boot.initrd.compressorArgs = [ "-19" ];
 
   boot.loader.efi.canTouchEfiVariables = true;
 }

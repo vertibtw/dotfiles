@@ -1,5 +1,10 @@
-## verti's dotfiles
-(impure acts against the nix store)
+<div align="center">
+
+    ## verti's dotfiles
+
+</div>
+
+a pile of dogshit or my magnum opus idk anymore depends on my mood tbh
 
 GLORY TO SYSTEMD
 

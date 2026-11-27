@@ -2,7 +2,7 @@
 let
   xp-cursor = pkgs.stdenvNoCC.mkDerivation {
     name = "xp-cursor";
-    src = ./xp-cursor.zip;
+    src = ./perlica-arknights-endfield-cursors.tar.zip;
 
     nativeBuildInputs = [ pkgs.unzip ];
 

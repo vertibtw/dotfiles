@@ -6,13 +6,12 @@
 }:
 lib.mkIf (profile == "desktop") {
   boot.kernelPackages = pkgs.linuxPackages_zen;
-
+#  boot.kernelPackages = pkgs.linuxPackages;
   boot.kernelParams = [
     "quiet"
     "loglevel=3"
     "fastboot"
   ];
-
   boot.kernelModules = [
     # camera stuff idk
     "v4l2loopback"
@@ -24,5 +23,4 @@ lib.mkIf (profile == "desktop") {
     "iptable_filter"
     "iptable_mangle"
   ];
-
 }

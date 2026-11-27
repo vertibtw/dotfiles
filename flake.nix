@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
+    vbar.url = "github:vertibtw/vbar";
+    nixcord.url = "github:4evy/nixcord";
 
     qs-git = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
@@ -30,17 +32,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    vbar = {
-      url = "github:vertibtw/vbar";
-    };
-
     dwm = {
       url = "git+https://git.suckless.org/dwm?rev=f63cde9354504ee9cfecc07517c03736d0f90c26";
       flake = false;
-    };
-
-    nixcord = {
-      url = "github:4evy/nixcord";
     };
 
     sni-watcher = {

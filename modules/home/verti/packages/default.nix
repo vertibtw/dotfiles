@@ -92,8 +92,9 @@
       nwg-look
       obs-studio
       osu-lazer-bin
+      lxqt.pcmanfm-qt
       picom
-      #      pkgs.kopuz temp removed cuz dep was broken
+      pkgs.kopuz
       pkgs.python3Packages.matplotlib
       playerctl
       qemu
@@ -101,7 +102,7 @@
       qt6.qttools
       simple-scan
       slurp
-      # spotify # deps broken
+      spotify # deps broken
       spotify-qt
       swaylock
       system-config-printer
