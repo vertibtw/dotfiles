@@ -6,7 +6,7 @@
 }:
 lib.mkIf (profile == "desktop") {
   boot.kernelPackages = pkgs.linuxPackages_zen;
-#  boot.kernelPackages = pkgs.linuxPackages;
+  #  boot.kernelPackages = pkgs.linuxPackages;
   boot.kernelParams = [
     "quiet"
     "loglevel=3"
