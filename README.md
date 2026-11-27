@@ -1,9 +1,4 @@
-<div align="center">
-
-    ## verti's dotfiles
-
-</div>
-
+<h2 align="center">verti's dotfiles</h2>
 a pile of dogshit or my magnum opus idk anymore depends on my mood tbh
 
 GLORY TO SYSTEMD
