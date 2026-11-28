@@ -64,6 +64,7 @@
       #keep-sorted start
       alsa-lib
       audacity
+      amberol
       blueman
       #brave
       brightnessctl

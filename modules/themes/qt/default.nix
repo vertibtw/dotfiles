@@ -5,7 +5,7 @@ let
     style=Fusion
     custom_palette=true
     color_scheme_path=Catppuccin-Mocha.conf
-    icon_theme=breeze
+    icon_theme=Tela-purple-dark
   '';
 
   # QPalette::ColorRole indexing:

@@ -15,6 +15,7 @@
 
         thickness = 10;
         modules-left = [
+          "launcher"
           "workspaces"
           "layout"
         ];

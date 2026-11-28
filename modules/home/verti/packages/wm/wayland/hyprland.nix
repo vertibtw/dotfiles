@@ -15,7 +15,7 @@ in
   xdg.configFile."hypr/shaders".source = ./shaders;
   xdg.configFile."hypr/colorscheme.lua".text = ''
     -- COLORSCHEME
-    local colorscheme = {
+    return {
       color1 = "rgb(${rgb theme.colors.blue})",
       color2 = "rgb(${rgb theme.colors.purple})",
       inactive = "rgb(${rgb theme.colors.background})"
