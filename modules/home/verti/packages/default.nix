@@ -63,8 +63,8 @@
     ++ lib.optionals (profile == "desktop") [
       #keep-sorted start
       alsa-lib
-      audacity
       amberol
+      audacity
       blueman
       #brave
       brightnessctl
@@ -86,6 +86,7 @@
       libvirt
       libxkbcommon
       lmms
+      lxqt.pcmanfm-qt
       mission-center
       nautilus
       networkmanagerapplet
@@ -93,7 +94,6 @@
       nwg-look
       obs-studio
       osu-lazer-bin
-      lxqt.pcmanfm-qt
       picom
       pkgs.kopuz
       pkgs.python3Packages.matplotlib
