@@ -11,6 +11,7 @@
     # keep-sorted start
     ./packages
     ./sessionVariables.nix
+    ./xdg.nix
     # keep-sorted end
   ];
 }

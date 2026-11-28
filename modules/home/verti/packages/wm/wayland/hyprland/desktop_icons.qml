@@ -10,10 +10,6 @@ ShellRoot {
 
     readonly property string desktopDir: Quickshell.env("HOME") + "/Desktop"
     readonly property string targetScreen: ""   // empty => first screen
-    readonly property var textExts: ["txt", "md", "conf", "cfg", "ini", "log", "nix", "sh", "py", "lua",
-                                     "rs", "c", "h", "js", "ts", "qml", "json", "toml", "yaml", "yml",
-                                     "xml", "html", "css", "csv"]
-    readonly property var imageExts: ["png", "jpg", "jpeg", "webp", "gif", "bmp", "svg"]
 
     function pickScreen() {
         const list = Quickshell.screens;
@@ -23,9 +19,7 @@ ShellRoot {
     }
 
     function open(path, suffix) {
-        if (textExts.indexOf(suffix.toLowerCase()) >= 0)
-            Quickshell.execDetached(["sh", "-c", '${TERMINAL:-kitty} -e ${EDITOR:-vi} "$1"', "sh", path]);
-        // TODO: .desktop files, folders etc
+        Quickshell.execDetached(["xdg-open", path]);
     }
 
     PanelWindow {
